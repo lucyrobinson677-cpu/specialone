@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,6 +87,7 @@
             position: relative;
             overflow: hidden;
             padding: 60px 8%;
+
             background:
                 linear-gradient(
                     rgba(73, 39, 45, 0.42),
@@ -190,6 +192,7 @@
         }
 
         @keyframes floatHeart {
+
             0%, 100% {
                 transform: translateY(0) rotate(0deg);
                 opacity: 0.4;
@@ -199,6 +202,7 @@
                 transform: translateY(-30px) rotate(10deg);
                 opacity: 1;
             }
+
         }
 
         /* =========================
@@ -233,7 +237,7 @@
         }
 
         /* =========================
-           JOURNEY
+           OUR JOURNEY
         ========================= */
 
         .journey-section {
@@ -311,7 +315,7 @@
         }
 
         /* =========================
-           MEMORIES
+           OUR MEMORIES
         ========================= */
 
         .memories-section {
@@ -387,6 +391,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            color: white;
+
             background:
                 linear-gradient(
                     rgba(76, 40, 47, 0.48),
@@ -394,7 +400,6 @@
                 ),
                 url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=2000&q=90")
                 center/cover no-repeat;
-            color: white;
         }
 
         .quote-content {
@@ -415,7 +420,7 @@
         }
 
         /* =========================
-           DESCRIBE YOU
+           IF I HAD TO DESCRIBE YOU
         ========================= */
 
         .describe-wrapper {
@@ -431,25 +436,39 @@
             flex: 0 0 50% !important;
         }
 
+        /*
+           IMPORTANT:
+           The image container is also 50%, but the image
+           itself is NOT forced into a fixed height.
+        */
+
         .describe-image {
             width: 50% !important;
             flex: 0 0 50% !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         /*
            CORRECTED TRAVEL IMAGE
-           object-fit: contain keeps the complete
-           travel.png visible without cropping.
+
+           No fixed height.
+           No object-cover.
+           No cropping.
+           The complete travel.png remains visible.
         */
 
         .describe-image img {
+            display: block;
             width: 100%;
-            height: 570px;
+            height: auto;
+            max-height: 650px;
             object-fit: contain;
             object-position: center;
-            background: #f8e6e5;
             border-radius: 180px 0 180px 0;
             border: 12px solid #f8e6e5;
+            background: #f8e6e5;
         }
 
         .describe-title {
@@ -461,7 +480,7 @@
         }
 
         /* =========================
-           FUTURE
+           OUR FUTURE
         ========================= */
 
         .future-section {
@@ -489,6 +508,7 @@
             justify-content: center;
             text-align: center;
             color: white;
+
             background:
                 linear-gradient(
                     rgba(72, 37, 44, 0.48),
@@ -550,6 +570,8 @@
                 padding: 75px 7%;
             }
 
+            /* HERO */
+
             .hero {
                 min-height: 100vh;
                 padding: 50px 7%;
@@ -568,7 +590,7 @@
                 line-height: 1.7;
             }
 
-            /* Chapter */
+            /* CHAPTER */
 
             .chapter-wrapper {
                 flex-direction: column !important;
@@ -588,7 +610,7 @@
                 border-radius: 100px 100px 0 0;
             }
 
-            /* Journey */
+            /* JOURNEY */
 
             .journey-wrapper {
                 flex-direction: column !important;
@@ -607,7 +629,7 @@
                 border-radius: 0 100px 0 100px;
             }
 
-            /* Memories */
+            /* MEMORIES */
 
             .memories-grid {
                 grid-template-columns: 1fr;
@@ -619,13 +641,13 @@
                 border-radius: 100px 100px 0 0;
             }
 
-            /* Letter */
+            /* LETTER */
 
             .letter p {
                 font-size: 22px;
             }
 
-            /* Quote */
+            /* QUOTE */
 
             .quote-section {
                 min-height: 55vh;
@@ -639,7 +661,9 @@
                 font-size: 23px;
             }
 
-            /* Describe */
+            /* =========================
+               DESCRIBE YOU - MOBILE
+            ========================= */
 
             .describe-wrapper {
                 flex-direction: column !important;
@@ -654,25 +678,34 @@
             }
 
             /*
-               On mobile, keep the whole travel image visible.
+               Keep travel.png completely visible
+               on mobile too.
             */
 
+            .describe-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
             .describe-image img {
+                display: block;
                 width: 100%;
-                height: 450px;
+                height: auto;
+                max-height: none;
                 object-fit: contain;
                 object-position: center;
                 border-radius: 100px 0 100px 0;
                 border: 10px solid #f8e6e5;
             }
 
-            /* Future */
+            /* FUTURE */
 
             .future-content .section-text {
                 font-size: 14px;
             }
 
-            /* Final */
+            /* FINAL */
 
             .final-section {
                 min-height: 65vh;
@@ -686,6 +719,8 @@
                 font-size: 24px;
             }
 
+            /* FOOTER */
+
             footer h3 {
                 font-size: 28px;
             }
@@ -696,6 +731,7 @@
 </head>
 
 <body>
+
 
     <!-- =========================
          HERO
@@ -1065,15 +1101,16 @@
 
             </div>
 
+
+            <!-- =========================
+                 TRAVEL IMAGE
+                 FULL IMAGE - NO CROP
+            ========================= -->
+
             <div class="describe-image">
 
-                <!--
-                    travel.png is displayed with object-fit: contain
-                    so the complete image remains visible.
-                -->
-
                 <img
-                    src="./travel.png?v=1"
+                    src="./travel.png?v=2"
                     alt="A beautiful travel memory together"
                 >
 
