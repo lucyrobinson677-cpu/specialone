@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -72,6 +73,7 @@
             margin: 28px 0;
         }
 
+
         /* =========================
            HERO
         ========================= */
@@ -79,9 +81,11 @@
         .hero {
             min-height: 100vh;
             position: relative;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
             padding: 60px 20px;
 
@@ -121,6 +125,7 @@
         .hero-quote {
             max-width: 620px;
             margin: 0 auto 25px;
+
             font-family: 'Cormorant Garamond', serif;
             font-size: 27px;
             line-height: 1.4;
@@ -135,11 +140,14 @@
         .scroll-link {
             color: white;
             text-decoration: none;
+
             font-size: 11px;
             letter-spacing: 3px;
+
             border-bottom: 1px solid rgba(255,255,255,0.7);
             padding-bottom: 10px;
         }
+
 
         /* =========================
            FLOATING HEARTS
@@ -147,8 +155,10 @@
 
         .heart {
             position: absolute;
+
             color: rgba(255, 225, 225, 0.8);
             font-size: 24px;
+
             animation: floatHeart 8s infinite ease-in-out;
         }
 
@@ -169,6 +179,7 @@
             animation-delay: 4s;
         }
 
+
         /* =========================
            CHAPTER ONE
         ========================= */
@@ -181,7 +192,9 @@
             display: flex !important;
             flex-direction: row !important;
             flex-wrap: nowrap !important;
+
             align-items: stretch;
+
             width: 100%;
             gap: 0;
         }
@@ -189,14 +202,18 @@
         .chapter-one-content {
             width: 50% !important;
             flex: 0 0 50% !important;
+
             padding: 50px 8% 50px 0;
         }
 
         .chapter-one-image {
             width: 50% !important;
             flex: 0 0 50% !important;
+
             min-height: 600px;
+
             overflow: hidden;
+
             border-radius: 180px 180px 0 0;
             border: 12px solid #f8e6e5;
         }
@@ -206,6 +223,7 @@
             height: 100%;
             object-fit: cover;
         }
+
 
         /* =========================
            OUR JOURNEY
@@ -219,7 +237,9 @@
             display: flex !important;
             flex-direction: row !important;
             flex-wrap: nowrap !important;
+
             align-items: center;
+
             width: 100%;
             gap: 0;
         }
@@ -227,8 +247,11 @@
         .journey-image {
             width: 50% !important;
             flex: 0 0 50% !important;
+
             height: 600px;
+
             overflow: hidden;
+
             border-radius: 0 180px 0 180px;
             border: 12px solid #f8dede;
         }
@@ -242,12 +265,15 @@
         .journey-content {
             width: 50% !important;
             flex: 0 0 50% !important;
+
             padding: 40px 0 40px 8%;
         }
 
         .timeline {
             margin-top: 35px;
+
             border-left: 1px solid #d8b5b5;
+
             padding-left: 30px;
         }
 
@@ -258,28 +284,39 @@
 
         .timeline-item::before {
             content: "";
+
             position: absolute;
+
             left: -36px;
             top: 5px;
+
             width: 11px;
             height: 11px;
+
             border-radius: 50%;
+
             background: #ad7575;
+
             border: 3px solid #fdf0ef;
         }
 
         .timeline-item h3 {
             color: #70464d;
+
             font-size: 27px;
+
             margin-bottom: 8px;
         }
 
         .timeline-item p {
             color: #806b6b;
+
             font-size: 14px;
             line-height: 1.8;
+
             font-weight: 300;
         }
+
 
         /* =========================
            OUR MEMORIES
@@ -297,27 +334,35 @@
 
         .memory-grid {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 25px;
         }
 
         .memory-card {
             height: 420px;
+
             overflow: hidden;
+
             border-radius: 130px 130px 0 0;
+
             background: #f8e6e5;
         }
 
         .memory-card img {
             width: 100%;
             height: 100%;
+
             object-fit: cover;
+
             transition: transform 0.6s ease;
         }
 
         .memory-card:hover img {
             transform: scale(1.06);
         }
+
 
         /* =========================
            LOVE LETTER
@@ -330,18 +375,27 @@
 
         .letter-card {
             max-width: 850px;
+
             margin: auto;
+
             padding: 75px 10%;
+
             background: white;
-            box-shadow: 0 20px 60px rgba(116, 70, 77, 0.08);
+
+            box-shadow:
+                0 20px 60px rgba(116, 70, 77, 0.08);
+
             position: relative;
         }
 
         .letter-card::before,
         .letter-card::after {
             content: "♥";
+
             position: absolute;
+
             color: #e7c4c4;
+
             font-size: 28px;
         }
 
@@ -357,24 +411,33 @@
 
         .letter-card h2 {
             color: #6e4148;
+
             font-size: 55px;
+
             margin-bottom: 30px;
         }
 
         .letter-card p {
             color: #806b6b;
+
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 25px;
             line-height: 1.6;
+
             margin-bottom: 20px;
         }
 
         .signature {
             margin-top: 35px;
+
             color: #9c6262;
+
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 28px;
         }
+
 
         /* =========================
            QUOTE
@@ -382,9 +445,12 @@
 
         .quote-section {
             min-height: 520px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             text-align: center;
 
             background:
@@ -404,18 +470,23 @@
 
         .quote-content h2 {
             font-size: clamp(45px, 6vw, 80px);
+
             line-height: 1.1;
+
             margin-bottom: 25px;
         }
 
         .quote-content p {
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 32px;
+
             color: #f9dede;
         }
 
+
         /* =========================
-           DESCRIBE YOU
+           IF I HAD TO DESCRIBE YOU
         ========================= */
 
         .describe-section {
@@ -426,7 +497,9 @@
             display: flex !important;
             flex-direction: row !important;
             flex-wrap: nowrap !important;
+
             align-items: center;
+
             width: 100%;
             gap: 0;
         }
@@ -434,23 +507,30 @@
         .describe-content {
             width: 50% !important;
             flex: 0 0 50% !important;
+
             padding-right: 8%;
         }
 
         .describe-image {
             width: 50% !important;
             flex: 0 0 50% !important;
+
             height: 570px;
+
             overflow: hidden;
+
             border-radius: 180px 0 180px 0;
+
             border: 12px solid #f8e6e5;
         }
 
         .describe-image img {
             width: 100%;
             height: 100%;
+
             object-fit: cover;
         }
+
 
         /* =========================
            FUTURE
@@ -463,15 +543,20 @@
 
         .future-content {
             max-width: 750px;
+
             margin: auto;
         }
 
         .future-content p {
             font-family: 'Cormorant Garamond', serif;
+
             color: #806b6b;
+
             font-size: 28px;
+
             line-height: 1.6;
         }
+
 
         /* =========================
            FINAL
@@ -479,10 +564,14 @@
 
         .final-section {
             min-height: 80vh;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             color: white;
 
             background:
@@ -496,16 +585,22 @@
 
         .final-content h2 {
             font-size: clamp(50px, 7vw, 95px);
+
             line-height: 1;
+
             margin-bottom: 30px;
         }
 
         .final-content p {
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 32px;
+
             line-height: 1.5;
+
             color: #ffe5e5;
         }
+
 
         /* =========================
            FOOTER
@@ -513,38 +608,48 @@
 
         footer {
             background: #5e3b42;
+
             color: #f9dddd;
+
             text-align: center;
+
             padding: 35px 20px;
         }
 
         footer h3 {
             font-size: 32px;
+
             margin-bottom: 10px;
         }
 
         footer p {
             font-size: 10px;
+
             letter-spacing: 3px;
         }
+
 
         /* =========================
            ANIMATIONS
         ========================= */
 
         @keyframes fadeUp {
+
             from {
                 opacity: 0;
+
                 transform: translateY(35px);
             }
 
             to {
                 opacity: 1;
+
                 transform: translateY(0);
             }
         }
 
         @keyframes floatHeart {
+
             0%,
             100% {
                 transform: translateY(0) rotate(0deg);
@@ -554,6 +659,7 @@
                 transform: translateY(-25px) rotate(10deg);
             }
         }
+
 
         /* =========================
            MOBILE
@@ -576,7 +682,9 @@
             .chapter-one-wrapper,
             .journey-wrapper,
             .describe-wrapper {
+
                 flex-direction: column !important;
+
                 flex-wrap: nowrap !important;
             }
 
@@ -586,7 +694,9 @@
             .journey-content,
             .describe-content,
             .describe-image {
+
                 width: 100% !important;
+
                 flex: 0 0 100% !important;
             }
 
@@ -596,11 +706,13 @@
 
             .chapter-one-image {
                 min-height: 450px;
+
                 border-radius: 120px 120px 0 0;
             }
 
             .journey-image {
                 height: 450px;
+
                 border-radius: 0 120px 0 120px;
             }
 
@@ -614,6 +726,7 @@
 
             .describe-image {
                 height: 450px;
+
                 border-radius: 120px 0 120px 0;
             }
 
@@ -640,9 +753,11 @@
             .quote-content p,
             .future-content p,
             .final-content p {
+
                 font-size: 26px;
             }
         }
+
 
         @media screen and (max-width: 450px) {
 
@@ -654,10 +769,13 @@
                 font-size: 48px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
+
 
     <!-- =========================
          HERO
@@ -666,8 +784,11 @@
     <header class="hero">
 
         <div class="heart heart-one">♥</div>
+
         <div class="heart heart-two">♥</div>
+
         <div class="heart heart-three">♥</div>
+
 
         <div class="hero-content">
 
@@ -675,18 +796,22 @@
                 My Favourite Place In This World
             </div>
 
+
             <h1>
                 He Is <span>♥</span><br>
                 My Comfort Zone
             </h1>
 
+
             <p class="hero-quote">
                 “In a world that can feel overwhelming, he is the one place where my heart feels at home.”
             </p>
 
+
             <p class="hero-description">
                 This is our story, written in little moments and endless love.
             </p>
+
 
             <a href="#chapter-one" class="scroll-link">
                 SCROLL TO OUR STORY ↓
@@ -697,6 +822,7 @@
     </header>
 
 
+
     <!-- =========================
          CHAPTER ONE
     ========================= -->
@@ -705,39 +831,48 @@
 
         <div class="chapter-one-wrapper">
 
+
             <div class="chapter-one-content">
 
                 <div class="eyebrow">
                     CHAPTER ONE
                 </div>
 
+
                 <h2 class="section-title">
                     Where It<br>
                     All Began
                 </h2>
 
+
                 <p class="section-text">
                     Sometimes the most beautiful stories begin in the most unexpected ways.
                 </p>
 
+
                 <br>
+
 
                 <p class="section-text">
                     I didn't know that meeting you would become the beginning of something
                     that would mean so much to me.
                 </p>
 
+
                 <br>
+
 
                 <p class="section-text">
                     At first, you were just someone I talked to. Then slowly,
                     our conversations became something I looked forward to every day.
                 </p>
 
+
                 <p class="highlight">
                     “And somewhere between all those little moments,
                     you became my favourite part of every day.”
                 </p>
+
 
                 <p class="section-text">
                     I never planned to fall for you. It just happened.
@@ -746,12 +881,12 @@
             </div>
 
 
-            <!-- PARK IMAGE -->
+            <!-- PARK -->
 
             <div class="chapter-one-image">
 
                 <img
-                    src="./park.png?v=1"
+                    src="./park.png?v=2"
                     alt="Our beautiful park memory">
 
             </div>
@@ -759,6 +894,7 @@
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -769,12 +905,13 @@
 
         <div class="journey-wrapper">
 
-            <!-- THEATER IMAGE -->
+
+            <!-- THEATER -->
 
             <div class="journey-image">
 
                 <img
-                    src="./theater.png?v=1"
+                    src="./theater.png?v=2"
                     alt="Our theater memory">
 
             </div>
@@ -786,12 +923,15 @@
                     OUR JOURNEY
                 </div>
 
+
                 <h2 class="section-title">
                     Little Moments,<br>
                     Big Feelings
                 </h2>
 
+
                 <div class="timeline">
+
 
                     <div class="timeline-item">
 
@@ -805,6 +945,7 @@
                         </p>
 
                     </div>
+
 
 
                     <div class="timeline-item">
@@ -821,6 +962,7 @@
                     </div>
 
 
+
                     <div class="timeline-item">
 
                         <h3>
@@ -833,6 +975,7 @@
                         </p>
 
                     </div>
+
 
 
                     <div class="timeline-item">
@@ -849,6 +992,7 @@
                     </div>
 
 
+
                     <div class="timeline-item">
 
                         <h3>
@@ -861,6 +1005,7 @@
 
                     </div>
 
+
                 </div>
 
             </div>
@@ -870,20 +1015,24 @@
     </section>
 
 
+
     <!-- =========================
          OUR MEMORIES
     ========================= -->
 
     <section class="memories">
 
+
         <div class="eyebrow">
             OUR MEMORIES
         </div>
+
 
         <h2 class="section-title">
             Moments I Want To<br>
             Keep Forever
         </h2>
+
 
         <p class="section-text memories-intro">
             Every picture holds a feeling, every memory carries a smile,
@@ -893,41 +1042,46 @@
 
         <div class="memory-grid">
 
-            <!-- GAME IMAGE -->
+
+            <!-- GAME -->
 
             <div class="memory-card">
 
                 <img
-                    src="./game.png?v=1"
+                    src="./game.png?v=2"
                     alt="Our game memory">
 
             </div>
 
 
-            <!-- MOMOS IMAGE -->
+
+            <!-- MOMOS -->
 
             <div class="memory-card">
 
                 <img
-                    src="./momos.png?v=1"
+                    src="./momos.png?v=2"
                     alt="Our momos memory">
 
             </div>
 
 
-            <!-- HOTEL IMAGE -->
+
+            <!-- HOTEL -->
 
             <div class="memory-card">
 
                 <img
-                    src="./hotel.png?v=1"
+                    src="./hotel.png?v=2"
                     alt="Our hotel memory">
 
             </div>
 
+
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -936,15 +1090,19 @@
 
     <section class="love-letter">
 
+
         <div class="eyebrow">
             A LITTLE LETTER
         </div>
 
+
         <div class="letter-card">
+
 
             <h2>
                 To My Favourite Person,
             </h2>
+
 
             <p>
                 You are my comfort zone, my safest place,
@@ -953,6 +1111,7 @@
                 and life feels a little more beautiful.
             </p>
 
+
             <p>
                 Thank you for being you.
                 Thank you for making my heart feel at home.
@@ -960,14 +1119,17 @@
                 I hope we always find our way back to each other.
             </p>
 
+
             <div class="signature">
                 With all my heart,<br>
                 Always yours ♥
             </div>
 
+
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -976,35 +1138,45 @@
 
     <section class="quote-section">
 
+
         <div class="quote-content">
+
 
             <h2>
                 “Home isn't always a place.<br>
                 Sometimes, it's a person.”
             </h2>
 
+
             <p>
                 And for me, it's you.
             </p>
+
 
         </div>
 
     </section>
 
 
+
     <!-- =========================
-         DESCRIBE YOU
+         IF I HAD TO DESCRIBE YOU
     ========================= -->
 
     <section class="describe-section">
 
         <div class="describe-wrapper">
 
+
+            <!-- CONTENT -->
+
             <div class="describe-content">
+
 
                 <div class="eyebrow">
                     IF I HAD TO DESCRIBE YOU
                 </div>
+
 
                 <h2 class="section-title">
                     He Is My Peace.<br>
@@ -1012,18 +1184,23 @@
                     He Is My Comfort Zone.
                 </h2>
 
+
                 <p class="section-text">
                     You are the person who makes everything feel a little softer.
                 </p>
 
+
                 <br>
+
 
                 <p class="section-text">
                     With you, I don't have to pretend. I can simply be myself —
                     completely, honestly and freely.
                 </p>
 
+
                 <br>
+
 
                 <p class="section-text">
                     You are where my heart feels safe.
@@ -1031,24 +1208,30 @@
                     Where I can just breathe.
                 </p>
 
+
                 <p class="highlight">
                     “If comfort had a name, I think it would be yours.”
                 </p>
 
+
             </div>
 
+
+            <!-- BIKE -->
 
             <div class="describe-image">
 
                 <img
-                    src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
-                    alt="Beautiful romantic couple moment">
+                    src="./bike.png?v=2"
+                    alt="Our bike memory">
 
             </div>
+
 
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -1057,16 +1240,20 @@
 
     <section class="future">
 
+
         <div class="future-content">
+
 
             <div class="eyebrow">
                 OUR FUTURE
             </div>
 
+
             <h2 class="section-title">
                 This Isn't<br>
                 The End
             </h2>
+
 
             <p>
                 There are still so many places to go,
@@ -1075,16 +1262,20 @@
                 and ordinary days to turn into something special.
             </p>
 
+
             <br>
+
 
             <p>
                 This is only one chapter of our story.
                 I cannot wait to live all the chapters that come next with you.
             </p>
 
+
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -1093,12 +1284,15 @@
 
     <section class="final-section">
 
+
         <div class="final-content">
+
 
             <h2>
                 If I Had To<br>
                 Choose Again...
             </h2>
+
 
             <p>
                 I would find you.<br>
@@ -1107,9 +1301,11 @@
                 All over again.
             </p>
 
+
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -1118,15 +1314,19 @@
 
     <footer>
 
+
         <h3>
             Forever & Always ♥
         </h3>
+
 
         <p>
             ONE STORY · TWO HEARTS · ONE BEAUTIFUL JOURNEY
         </p>
 
+
     </footer>
+
 
 </body>
 </html>
