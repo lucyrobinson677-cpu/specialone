@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>He Is My Comfort Zone | Our Love Story</title>
+    <title>Our Story ♥</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -31,12 +32,9 @@
             display: block;
         }
 
-        h1,
-        h2,
-        h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-        }
+        /* =========================
+           GENERAL
+        ========================= */
 
         section {
             padding: 100px 8%;
@@ -52,8 +50,10 @@
 
         .section-title {
             color: #6e4148;
+            font-family: 'Cormorant Garamond', serif;
             font-size: clamp(42px, 5vw, 72px);
             line-height: 1.05;
+            font-weight: 500;
             margin-bottom: 30px;
         }
 
@@ -62,6 +62,7 @@
             font-size: 15px;
             line-height: 2;
             font-weight: 300;
+            margin-bottom: 25px;
         }
 
         .highlight {
@@ -69,7 +70,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 27px;
             line-height: 1.4;
-            margin: 28px 0;
+            margin: 30px 0;
         }
 
         /* =========================
@@ -78,67 +79,78 @@
 
         .hero {
             min-height: 100vh;
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 60px 20px;
-
+            position: relative;
+            overflow: hidden;
+            padding: 60px 8%;
             background:
                 linear-gradient(
-                    rgba(82, 45, 53, 0.38),
-                    rgba(82, 45, 53, 0.48)
+                    rgba(73, 39, 45, 0.42),
+                    rgba(73, 39, 45, 0.42)
                 ),
                 url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=2000&q=90")
                 center/cover no-repeat;
-
-            color: white;
         }
 
         .hero-content {
+            position: relative;
+            z-index: 2;
             max-width: 850px;
-            animation: fadeUp 1.5s ease forwards;
+            color: white;
         }
 
         .hero-small {
-            font-size: 13px;
-            letter-spacing: 4px;
+            font-size: 12px;
+            letter-spacing: 5px;
             text-transform: uppercase;
             margin-bottom: 25px;
+            font-weight: 400;
         }
 
         .hero h1 {
-            font-size: clamp(60px, 9vw, 125px);
-            line-height: 0.95;
-            margin-bottom: 30px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(58px, 9vw, 125px);
+            line-height: 0.9;
+            font-weight: 500;
+            margin-bottom: 35px;
         }
 
         .hero h1 span {
-            color: #f6d4d5;
+            color: #ffdede;
         }
 
         .hero-quote {
-            max-width: 620px;
-            margin: 0 auto 25px;
             font-family: 'Cormorant Garamond', serif;
-            font-size: 27px;
-            line-height: 1.4;
+            font-size: 25px;
+            line-height: 1.5;
+            max-width: 700px;
+            margin: 0 auto 25px;
         }
 
         .hero-description {
             font-size: 14px;
             letter-spacing: 1px;
             margin-bottom: 45px;
+            font-weight: 300;
         }
 
-        .scroll-link {
+        .hero-button {
+            display: inline-block;
             color: white;
+            border: 1px solid rgba(255,255,255,0.7);
+            padding: 15px 30px;
             text-decoration: none;
             font-size: 11px;
             letter-spacing: 3px;
-            border-bottom: 1px solid rgba(255,255,255,0.7);
-            padding-bottom: 10px;
+            transition: 0.3s ease;
+        }
+
+        .hero-button:hover {
+            background: white;
+            color: #6e4148;
         }
 
         /* =========================
@@ -147,72 +159,85 @@
 
         .heart {
             position: absolute;
-            color: rgba(255, 225, 225, 0.8);
-            font-size: 24px;
+            color: rgba(255, 220, 220, 0.75);
+            font-size: 20px;
             animation: floatHeart 8s infinite ease-in-out;
+            z-index: 1;
         }
 
-        .heart-one {
-            top: 18%;
-            left: 12%;
+        .heart:nth-child(1) {
+            left: 10%;
+            top: 20%;
+            animation-delay: 0s;
         }
 
-        .heart-two {
-            top: 70%;
-            right: 15%;
+        .heart:nth-child(2) {
+            left: 80%;
+            top: 25%;
             animation-delay: 2s;
         }
 
-        .heart-three {
-            top: 35%;
-            right: 8%;
+        .heart:nth-child(3) {
+            left: 20%;
+            top: 75%;
             animation-delay: 4s;
+        }
+
+        .heart:nth-child(4) {
+            left: 75%;
+            top: 70%;
+            animation-delay: 1s;
+        }
+
+        @keyframes floatHeart {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(10deg);
+                opacity: 1;
+            }
         }
 
         /* =========================
            CHAPTER ONE
         ========================= */
 
-        .chapter-one {
-            background: #fff9f8;
-        }
-
-        .chapter-one-wrapper {
+        .chapter-wrapper {
             display: flex !important;
             flex-direction: row !important;
             flex-wrap: nowrap !important;
-            align-items: stretch;
+            align-items: center;
+            gap: 8%;
+        }
+
+        .chapter-content {
+            width: 50% !important;
+            flex: 0 0 50% !important;
+        }
+
+        .chapter-image {
+            width: 50% !important;
+            flex: 0 0 50% !important;
+        }
+
+        .chapter-image img {
             width: 100%;
-            gap: 0;
-        }
-
-        .chapter-one-content {
-            width: 50% !important;
-            flex: 0 0 50% !important;
-            padding: 50px 8% 50px 0;
-        }
-
-        .chapter-one-image {
-            width: 50% !important;
-            flex: 0 0 50% !important;
             min-height: 600px;
-            overflow: hidden;
+            object-fit: cover;
+            object-position: center;
             border-radius: 180px 180px 0 0;
             border: 12px solid #f8e6e5;
         }
 
-        .chapter-one-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
         /* =========================
-           OUR JOURNEY
+           JOURNEY
         ========================= */
 
-        .journey {
-            background: #fdf0ef;
+        .journey-section {
+            background: #fff4f2;
         }
 
         .journey-wrapper {
@@ -220,57 +245,61 @@
             flex-direction: row !important;
             flex-wrap: nowrap !important;
             align-items: center;
-            width: 100%;
-            gap: 0;
+            gap: 8%;
         }
 
         .journey-image {
             width: 50% !important;
             flex: 0 0 50% !important;
-            height: 600px;
-            overflow: hidden;
-            border-radius: 0 180px 0 180px;
-            border: 12px solid #f8dede;
-        }
-
-        .journey-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
 
         .journey-content {
             width: 50% !important;
             flex: 0 0 50% !important;
-            padding: 40px 0 40px 8%;
+        }
+
+        .journey-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0 180px 0 180px;
+            border: 12px solid #f8dede;
         }
 
         .timeline {
-            margin-top: 35px;
-            border-left: 1px solid #d8b5b5;
-            padding-left: 30px;
+            position: relative;
+            margin-top: 40px;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 30px;
+            padding-left: 35px;
+            padding-bottom: 35px;
+            border-left: 1px solid #d9b8b8;
+        }
+
+        .timeline-item:last-child {
+            border-left: none;
+            padding-bottom: 0;
         }
 
         .timeline-item::before {
             content: "";
             position: absolute;
-            left: -36px;
-            top: 5px;
-            width: 11px;
-            height: 11px;
+            left: -5px;
+            top: 0;
+            width: 9px;
+            height: 9px;
             border-radius: 50%;
             background: #ad7575;
-            border: 3px solid #fdf0ef;
         }
 
         .timeline-item h3 {
-            color: #70464d;
+            font-family: 'Cormorant Garamond', serif;
             font-size: 27px;
+            color: #70464d;
+            font-weight: 500;
             margin-bottom: 8px;
         }
 
@@ -282,28 +311,27 @@
         }
 
         /* =========================
-           OUR MEMORIES
+           MEMORIES
         ========================= */
 
-        .memories {
+        .memories-section {
             text-align: center;
-            background: #fff9f8;
         }
 
         .memories-intro {
             max-width: 650px;
-            margin: 0 auto 50px;
+            margin: 0 auto 60px;
         }
 
-        .memory-grid {
+        .memories-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 30px;
         }
 
         .memory-card {
-            height: 420px;
             overflow: hidden;
+            height: 420px;
             border-radius: 130px 130px 0 0;
             background: #f8e6e5;
         }
@@ -312,68 +340,41 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
             transition: transform 0.6s ease;
         }
 
         .memory-card:hover img {
-            transform: scale(1.06);
+            transform: scale(1.05);
         }
 
         /* =========================
            LOVE LETTER
         ========================= */
 
-        .love-letter {
-            background: #fdf0ef;
+        .letter-section {
+            background: #f8e9e7;
             text-align: center;
         }
 
-        .letter-card {
-            max-width: 850px;
+        .letter {
+            max-width: 800px;
             margin: auto;
-            padding: 75px 10%;
-            background: white;
-            box-shadow: 0 20px 60px rgba(116, 70, 77, 0.08);
-            position: relative;
         }
 
-        .letter-card::before,
-        .letter-card::after {
-            content: "♥";
-            position: absolute;
-            color: #e7c4c4;
-            font-size: 28px;
-        }
-
-        .letter-card::before {
-            top: 25px;
-            left: 30px;
-        }
-
-        .letter-card::after {
-            bottom: 25px;
-            right: 30px;
-        }
-
-        .letter-card h2 {
-            color: #6e4148;
-            font-size: 55px;
-            margin-bottom: 30px;
-        }
-
-        .letter-card p {
-            color: #806b6b;
+        .letter p {
             font-family: 'Cormorant Garamond', serif;
             font-size: 25px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.7;
+            color: #76585b;
+            margin-bottom: 25px;
         }
 
         .signature {
-            margin-top: 35px;
-            color: #9c6262;
+            margin-top: 40px;
             font-family: 'Cormorant Garamond', serif;
             font-size: 28px;
+            color: #9c6262;
         }
 
         /* =========================
@@ -381,20 +382,18 @@
         ========================= */
 
         .quote-section {
-            min-height: 520px;
+            min-height: 65vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-
             background:
                 linear-gradient(
-                    rgba(83, 46, 54, 0.55),
-                    rgba(83, 46, 54, 0.55)
+                    rgba(76, 40, 47, 0.48),
+                    rgba(76, 40, 47, 0.48)
                 ),
                 url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=2000&q=90")
                 center/cover no-repeat;
-
             color: white;
         }
 
@@ -403,74 +402,80 @@
         }
 
         .quote-content h2 {
-            font-size: clamp(45px, 6vw, 80px);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(45px, 6vw, 75px);
+            font-weight: 400;
             line-height: 1.1;
             margin-bottom: 25px;
         }
 
         .quote-content p {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 32px;
-            color: #f9dede;
+            font-size: 28px;
         }
 
         /* =========================
            DESCRIBE YOU
         ========================= */
 
-        .describe-section {
-            background: #fff9f8;
-        }
-
         .describe-wrapper {
             display: flex !important;
             flex-direction: row !important;
             flex-wrap: nowrap !important;
             align-items: center;
-            width: 100%;
-            gap: 0;
+            gap: 8%;
         }
 
         .describe-content {
             width: 50% !important;
             flex: 0 0 50% !important;
-            padding-right: 8%;
         }
 
         .describe-image {
             width: 50% !important;
             flex: 0 0 50% !important;
+        }
+
+        /*
+           CORRECTED TRAVEL IMAGE
+           object-fit: contain keeps the complete
+           travel.png visible without cropping.
+        */
+
+        .describe-image img {
+            width: 100%;
             height: 570px;
-            overflow: hidden;
+            object-fit: contain;
+            object-position: center;
+            background: #f8e6e5;
             border-radius: 180px 0 180px 0;
             border: 12px solid #f8e6e5;
         }
 
-        .describe-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .describe-title {
+            margin-bottom: 35px;
+        }
+
+        .describe-title span {
+            display: block;
         }
 
         /* =========================
            FUTURE
         ========================= */
 
-        .future {
+        .future-section {
+            background: #fff4f2;
             text-align: center;
-            background: #fdf0ef;
         }
 
         .future-content {
-            max-width: 750px;
+            max-width: 800px;
             margin: auto;
         }
 
-        .future-content p {
-            font-family: 'Cormorant Garamond', serif;
-            color: #806b6b;
-            font-size: 28px;
-            line-height: 1.6;
+        .future-content .section-text {
+            font-size: 16px;
         }
 
         /* =========================
@@ -484,27 +489,31 @@
             justify-content: center;
             text-align: center;
             color: white;
-
             background:
                 linear-gradient(
-                    rgba(82, 45, 53, 0.48),
-                    rgba(82, 45, 53, 0.58)
+                    rgba(72, 37, 44, 0.48),
+                    rgba(72, 37, 44, 0.48)
                 ),
                 url("https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?auto=format&fit=crop&w=2000&q=90")
                 center/cover no-repeat;
         }
 
+        .final-content {
+            max-width: 900px;
+        }
+
         .final-content h2 {
-            font-size: clamp(50px, 7vw, 95px);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(50px, 7vw, 90px);
+            font-weight: 400;
             line-height: 1;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .final-content p {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 32px;
+            font-size: 30px;
             line-height: 1.5;
-            color: #ffe5e5;
         }
 
         /* =========================
@@ -512,47 +521,23 @@
         ========================= */
 
         footer {
-            background: #5e3b42;
-            color: #f9dddd;
+            background: #5c3b40;
+            color: #f8e6e5;
             text-align: center;
-            padding: 35px 20px;
+            padding: 45px 20px;
         }
 
         footer h3 {
+            font-family: 'Cormorant Garamond', serif;
             font-size: 32px;
+            font-weight: 400;
             margin-bottom: 10px;
         }
 
         footer p {
             font-size: 10px;
             letter-spacing: 3px;
-        }
-
-        /* =========================
-           ANIMATIONS
-        ========================= */
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(35px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes floatHeart {
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-25px) rotate(10deg);
-            }
+            opacity: 0.8;
         }
 
         /* =========================
@@ -565,95 +550,148 @@
                 padding: 75px 7%;
             }
 
+            .hero {
+                min-height: 100vh;
+                padding: 50px 7%;
+            }
+
             .hero h1 {
-                font-size: 65px;
+                font-size: clamp(52px, 15vw, 80px);
             }
 
             .hero-quote {
+                font-size: 21px;
+            }
+
+            .hero-description {
+                font-size: 12px;
+                line-height: 1.7;
+            }
+
+            /* Chapter */
+
+            .chapter-wrapper {
+                flex-direction: column !important;
+                flex-wrap: nowrap !important;
+                gap: 50px;
+            }
+
+            .chapter-content,
+            .chapter-image {
+                width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+
+            .chapter-image img {
+                min-height: 450px;
+                height: 450px;
+                border-radius: 100px 100px 0 0;
+            }
+
+            /* Journey */
+
+            .journey-wrapper {
+                flex-direction: column !important;
+                flex-wrap: nowrap !important;
+                gap: 50px;
+            }
+
+            .journey-image,
+            .journey-content {
+                width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+
+            .journey-image img {
+                height: 450px;
+                border-radius: 0 100px 0 100px;
+            }
+
+            /* Memories */
+
+            .memories-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .memory-card {
+                height: 430px;
+                border-radius: 100px 100px 0 0;
+            }
+
+            /* Letter */
+
+            .letter p {
+                font-size: 22px;
+            }
+
+            /* Quote */
+
+            .quote-section {
+                min-height: 55vh;
+            }
+
+            .quote-content h2 {
+                font-size: 48px;
+            }
+
+            .quote-content p {
                 font-size: 23px;
             }
 
-            .chapter-one-wrapper,
-            .journey-wrapper,
+            /* Describe */
+
             .describe-wrapper {
                 flex-direction: column !important;
                 flex-wrap: nowrap !important;
+                gap: 50px;
             }
 
-            .chapter-one-content,
-            .chapter-one-image,
-            .journey-image,
-            .journey-content,
             .describe-content,
             .describe-image {
                 width: 100% !important;
                 flex: 0 0 100% !important;
             }
 
-            .chapter-one-content {
-                padding: 0 0 40px;
-            }
+            /*
+               On mobile, keep the whole travel image visible.
+            */
 
-            .chapter-one-image {
-                min-height: 450px;
-                border-radius: 120px 120px 0 0;
-            }
-
-            .journey-image {
+            .describe-image img {
+                width: 100%;
                 height: 450px;
-                border-radius: 0 120px 0 120px;
+                object-fit: contain;
+                object-position: center;
+                border-radius: 100px 0 100px 0;
+                border: 10px solid #f8e6e5;
             }
 
-            .journey-content {
-                padding: 50px 0 0;
+            /* Future */
+
+            .future-content .section-text {
+                font-size: 14px;
             }
 
-            .describe-content {
-                padding: 0 0 40px;
+            /* Final */
+
+            .final-section {
+                min-height: 65vh;
             }
 
-            .describe-image {
-                height: 450px;
-                border-radius: 120px 0 120px 0;
+            .final-content h2 {
+                font-size: 52px;
             }
 
-            .memory-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .memory-card {
-                height: 430px;
-            }
-
-            .letter-card {
-                padding: 55px 8%;
-            }
-
-            .letter-card h2 {
-                font-size: 45px;
-            }
-
-            .letter-card p {
-                font-size: 23px;
-            }
-
-            .quote-content p,
-            .future-content p,
             .final-content p {
-                font-size: 26px;
+                font-size: 24px;
             }
+
+            footer h3 {
+                font-size: 28px;
+            }
+
         }
 
-        @media screen and (max-width: 450px) {
-
-            .hero h1 {
-                font-size: 53px;
-            }
-
-            .section-title {
-                font-size: 48px;
-            }
-        }
     </style>
 </head>
 
@@ -663,11 +701,12 @@
          HERO
     ========================= -->
 
-    <header class="hero">
+    <section class="hero">
 
-        <div class="heart heart-one">♥</div>
-        <div class="heart heart-two">♥</div>
-        <div class="heart heart-three">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
+        <div class="heart">♥</div>
 
         <div class="hero-content">
 
@@ -680,63 +719,55 @@
                 My Comfort Zone
             </h1>
 
-            <p class="hero-quote">
+            <div class="hero-quote">
                 “In a world that can feel overwhelming, he is the one place where my heart feels at home.”
-            </p>
+            </div>
 
-            <p class="hero-description">
+            <div class="hero-description">
                 This is our story, written in little moments and endless love.
-            </p>
+            </div>
 
-            <a href="#chapter-one" class="scroll-link">
+            <a href="#story" class="hero-button">
                 SCROLL TO OUR STORY ↓
             </a>
 
         </div>
 
-    </header>
+    </section>
 
 
     <!-- =========================
          CHAPTER ONE
     ========================= -->
 
-    <section class="chapter-one" id="chapter-one">
+    <section id="story">
 
-        <div class="chapter-one-wrapper">
+        <div class="chapter-wrapper">
 
-            <div class="chapter-one-content">
+            <div class="chapter-content">
 
                 <div class="eyebrow">
                     CHAPTER ONE
                 </div>
 
                 <h2 class="section-title">
-                    Where It<br>
-                    All Began
+                    Where It All Began
                 </h2>
 
                 <p class="section-text">
                     Sometimes the most beautiful stories begin in the most unexpected ways.
                 </p>
 
-                <br>
-
                 <p class="section-text">
-                    I didn't know that meeting you would become the beginning of something
-                    that would mean so much to me.
+                    I didn't know that meeting you would become the beginning of something that would mean so much to me.
                 </p>
 
-                <br>
-
                 <p class="section-text">
-                    At first, you were just someone I talked to. Then slowly,
-                    our conversations became something I looked forward to every day.
+                    At first, you were just someone I talked to. Then slowly, our conversations became something I looked forward to every day.
                 </p>
 
                 <p class="highlight">
-                    “And somewhere between all those little moments,
-                    you became my favourite part of every day.”
+                    And somewhere between all those little moments, you became my favourite part of every day.
                 </p>
 
                 <p class="section-text">
@@ -745,14 +776,12 @@
 
             </div>
 
-
-            <!-- PARK IMAGE -->
-
-            <div class="chapter-one-image">
+            <div class="chapter-image">
 
                 <img
                     src="./park.png?v=1"
-                    alt="Our beautiful park memory">
+                    alt="A beautiful memory together"
+                >
 
             </div>
 
@@ -765,20 +794,18 @@
          OUR JOURNEY
     ========================= -->
 
-    <section class="journey">
+    <section class="journey-section">
 
         <div class="journey-wrapper">
-
-            <!-- THEATER IMAGE -->
 
             <div class="journey-image">
 
                 <img
                     src="./theater.png?v=1"
-                    alt="Our theater memory">
+                    alt="Our journey together"
+                >
 
             </div>
-
 
             <div class="journey-content">
 
@@ -800,12 +827,10 @@
                         </h3>
 
                         <p>
-                            One ordinary day that quietly became the beginning
-                            of something extraordinary.
+                            One ordinary day that quietly became the beginning of something extraordinary.
                         </p>
 
                     </div>
-
 
                     <div class="timeline-item">
 
@@ -814,12 +839,10 @@
                         </h3>
 
                         <p>
-                            Conversations became longer, smiles became more frequent,
-                            and somehow I started waiting for your messages.
+                            Conversations became longer, smiles became more frequent, and somehow I started waiting for your messages.
                         </p>
 
                     </div>
-
 
                     <div class="timeline-item">
 
@@ -828,12 +851,10 @@
                         </h3>
 
                         <p>
-                            Somewhere between the laughs, conversations and little moments,
-                            my heart chose you.
+                            Somewhere between the laughs, conversations and little moments, my heart chose you.
                         </p>
 
                     </div>
-
 
                     <div class="timeline-item">
 
@@ -842,12 +863,10 @@
                         </h3>
 
                         <p>
-                            With you, I discovered a feeling I didn't know I was looking for:
-                            peace.
+                            With you, I discovered a feeling I didn't know I was looking for: peace.
                         </p>
 
                     </div>
-
 
                     <div class="timeline-item">
 
@@ -874,54 +893,46 @@
          OUR MEMORIES
     ========================= -->
 
-    <section class="memories">
+    <section class="memories-section">
 
         <div class="eyebrow">
             OUR MEMORIES
         </div>
 
         <h2 class="section-title">
-            Moments I Want To<br>
-            Keep Forever
+            Moments I Want To Keep Forever
         </h2>
 
         <p class="section-text memories-intro">
-            Every picture holds a feeling, every memory carries a smile,
-            and every moment with you is something I want to keep forever.
+            Every picture holds a feeling, every memory carries a smile, and every moment with you is something I want to keep forever.
         </p>
 
-
-        <div class="memory-grid">
-
-            <!-- GAME -->
+        <div class="memories-grid">
 
             <div class="memory-card">
 
                 <img
                     src="./game.png?v=1"
-                    alt="Our game memory">
+                    alt="Our gaming memory"
+                >
 
             </div>
-
-
-            <!-- MOMOS -->
 
             <div class="memory-card">
 
                 <img
                     src="./momos.png?v=1"
-                    alt="Our momos memory">
+                    alt="Our food memory"
+                >
 
             </div>
-
-
-            <!-- HOTEL -->
 
             <div class="memory-card">
 
                 <img
                     src="./hotel.png?v=1"
-                    alt="Our hotel memory">
+                    alt="Our special memory"
+                >
 
             </div>
 
@@ -934,30 +945,41 @@
          LOVE LETTER
     ========================= -->
 
-    <section class="love-letter">
+    <section class="letter-section">
 
         <div class="eyebrow">
             A LITTLE LETTER
         </div>
 
-        <div class="letter-card">
+        <div class="letter">
 
-            <h2>
+            <h2 class="section-title">
                 To My Favourite Person,
             </h2>
 
             <p>
-                You are my comfort zone, my safest place,
-                and the person who makes even the hardest days feel lighter.
-                With you, silence feels peaceful, laughter feels natural,
-                and life feels a little more beautiful.
+                You became my comfort zone without even trying.
+                Somehow, being around you makes everything feel a little easier.
             </p>
 
             <p>
-                Thank you for being you.
-                Thank you for making my heart feel at home.
-                No matter where life takes us,
-                I hope we always find our way back to each other.
+                You are the person I can talk to about everything and nothing.
+                The person I can laugh with until my stomach hurts.
+                The person whose silence somehow feels peaceful.
+            </p>
+
+            <p>
+                On difficult days, you make things feel lighter.
+                On happy days, you make them even more beautiful.
+            </p>
+
+            <p>
+                I don't know exactly what the future will look like,
+                but I know I want to keep making memories with you.
+            </p>
+
+            <p>
+                Wherever life takes us, I hope we always find our way back to each other.
             </p>
 
             <div class="signature">
@@ -971,7 +993,7 @@
 
 
     <!-- =========================
-         ROMANTIC QUOTE
+         QUOTE
     ========================= -->
 
     <section class="quote-section">
@@ -979,8 +1001,8 @@
         <div class="quote-content">
 
             <h2>
-                “Home isn't always a place.<br>
-                Sometimes, it's a person.”
+                Home isn't always a place.<br>
+                Sometimes, it's a person.
             </h2>
 
             <p>
@@ -996,11 +1018,9 @@
          IF I HAD TO DESCRIBE YOU
     ========================= -->
 
-    <section class="describe-section">
+    <section>
 
         <div class="describe-wrapper">
-
-            <!-- CONTENT LEFT -->
 
             <div class="describe-content">
 
@@ -1008,24 +1028,30 @@
                     IF I HAD TO DESCRIBE YOU
                 </div>
 
-                <h2 class="section-title">
-                    He Is My Peace.<br>
-                    He Is My Home.<br>
-                    He Is My Comfort Zone.
+                <h2 class="section-title describe-title">
+
+                    <span>
+                        He Is My Peace.
+                    </span>
+
+                    <span>
+                        He Is My Home.
+                    </span>
+
+                    <span>
+                        He Is My Comfort Zone.
+                    </span>
+
                 </h2>
 
                 <p class="section-text">
                     You are the person who makes everything feel a little softer.
                 </p>
 
-                <br>
-
                 <p class="section-text">
-                    With you, I don't have to pretend. I can simply be myself —
-                    completely, honestly and freely.
+                    With you, I don't have to pretend.
+                    I can simply be myself — completely, honestly and freely.
                 </p>
-
-                <br>
 
                 <p class="section-text">
                     You are where my heart feels safe.
@@ -1034,19 +1060,22 @@
                 </p>
 
                 <p class="highlight">
-                    “If comfort had a name, I think it would be yours.”
+                    If comfort had a name, I think it would be yours.
                 </p>
 
             </div>
 
-
-            <!-- TRAVEL IMAGE RIGHT -->
-
             <div class="describe-image">
+
+                <!--
+                    travel.png is displayed with object-fit: contain
+                    so the complete image remains visible.
+                -->
 
                 <img
                     src="./travel.png?v=1"
-                    alt="Our travel memory">
+                    alt="A beautiful travel memory together"
+                >
 
             </div>
 
@@ -1059,7 +1088,7 @@
          OUR FUTURE
     ========================= -->
 
-    <section class="future">
+    <section class="future-section">
 
         <div class="future-content">
 
@@ -1068,22 +1097,31 @@
             </div>
 
             <h2 class="section-title">
-                This Isn't<br>
-                The End
+                This Isn't The End
             </h2>
 
-            <p>
-                There are still so many places to go,
-                memories to make, sunsets to watch,
-                silly moments to share,
-                and ordinary days to turn into something special.
+            <p class="section-text">
+                There are still so many places we haven't been to,
+                memories we haven't made,
+                sunsets we haven't watched together,
+                and silly moments we haven't laughed about yet.
             </p>
 
-            <br>
+            <p class="section-text">
+                I want the ordinary days too.
+                The random conversations.
+                The little arguments.
+                The late-night talks.
+                The spontaneous plans.
+                The quiet mornings.
+            </p>
 
-            <p>
-                This is only one chapter of our story.
-                I cannot wait to live all the chapters that come next with you.
+            <p class="highlight">
+                Because with you, even ordinary moments have a way of becoming special.
+            </p>
+
+            <p class="section-text">
+                So here's to all the chapters we haven't written yet.
             </p>
 
         </div>
@@ -1092,7 +1130,7 @@
 
 
     <!-- =========================
-         FINAL MESSAGE
+         FINAL
     ========================= -->
 
     <section class="final-section">
@@ -1100,8 +1138,7 @@
         <div class="final-content">
 
             <h2>
-                If I Had To<br>
-                Choose Again...
+                If I Had To Choose Again...
             </h2>
 
             <p>
