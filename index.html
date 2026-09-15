@@ -41,6 +41,7 @@ h3 {
     font-family: 'Cormorant Garamond', serif;
 }
 
+
 /* =========================
    HERO
 ========================= */
@@ -48,11 +49,14 @@ h3 {
 .hero {
     min-height: 100vh;
     position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
     color: white;
+
     overflow: hidden;
 
     background:
@@ -67,8 +71,10 @@ h3 {
 .hero-content {
     max-width: 850px;
     padding: 40px 25px;
+
     position: relative;
     z-index: 2;
+
     animation: fadeUp 1.5s ease;
 }
 
@@ -95,8 +101,10 @@ h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
     line-height: 1.5;
+
     max-width: 650px;
     margin: auto;
+
     font-style: italic;
 }
 
@@ -113,12 +121,14 @@ h3 {
     opacity: 0.8;
 }
 
-/* Floating hearts */
+
+/* FLOATING HEARTS */
 
 .heart {
     position: absolute;
     color: rgba(255, 220, 225, 0.65);
     font-size: 20px;
+
     animation: floatHeart 8s infinite ease-in-out;
 }
 
@@ -157,8 +167,10 @@ h3 {
 }
 
 .chapter-one-wrapper {
+
     width: 100%;
     max-width: 1400px;
+
     margin: auto;
 
     display: flex !important;
@@ -168,64 +180,100 @@ h3 {
     align-items: center;
 }
 
+
+/* LEFT CONTENT */
+
 .chapter-one-content {
+
     width: 50% !important;
     flex: 0 0 50% !important;
+
     padding: 70px;
 }
 
+
+/* RIGHT IMAGE */
+
 .chapter-one-image {
+
     width: 50% !important;
     flex: 0 0 50% !important;
+
     position: relative;
 }
 
 .chapter-one-image img {
+
     width: 100%;
     height: 600px;
+
     object-fit: cover;
-}
 
-.chapter-one-image::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #d8b5b5;
-    left: -15px;
-    top: -15px;
-    z-index: 0;
-}
-
-.chapter-one-image img {
     position: relative;
     z-index: 1;
 }
 
+
+/* IMAGE BORDER */
+
+.chapter-one-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #d8b5b5;
+
+    left: -15px;
+    top: -15px;
+
+    z-index: 0;
+}
+
+
+/* CHAPTER TEXT */
+
 .section-label {
+
     font-size: 11px;
     letter-spacing: 4px;
+
     color: #ad7575;
+
     margin-bottom: 18px;
 }
 
 .chapter-one h2 {
+
     font-size: 65px;
+
     color: #70464d;
+
     line-height: 0.95;
+
     font-weight: 500;
+
     margin-bottom: 35px;
 }
 
 .chapter-one p {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 21px;
+
     line-height: 1.6;
+
     margin-bottom: 20px;
 }
 
 .highlight {
+
     color: #9c6262;
+
     font-style: italic;
 }
 
@@ -236,13 +284,17 @@ h3 {
 ========================= */
 
 .journey {
+
     background: #fdf0ef;
+
     padding: 110px 6%;
 }
 
 .journey-wrapper {
+
     width: 100%;
     max-width: 1400px;
+
     margin: auto;
 
     display: flex !important;
@@ -252,84 +304,132 @@ h3 {
     align-items: center;
 }
 
+
+/* IMAGE LEFT */
+
 .journey-image {
+
     width: 50% !important;
     flex: 0 0 50% !important;
+
     position: relative;
 }
 
 .journey-image img {
+
     width: 100%;
     height: 600px;
+
     object-fit: cover;
+
     position: relative;
     z-index: 1;
 }
 
 .journey-image::after {
+
     content: "";
+
     position: absolute;
+
     width: 100%;
     height: 100%;
+
     border: 1px solid #c99e9e;
+
     left: -10px;
     bottom: -15px;
 }
 
+
+/* CONTENT RIGHT */
+
 .journey-content {
+
     width: 50% !important;
     flex: 0 0 50% !important;
+
     padding: 60px 80px;
 }
 
 .journey-content h2 {
+
     font-size: 65px;
+
     color: #70464d;
+
     line-height: 0.95;
+
     font-weight: 500;
+
     margin-bottom: 45px;
 }
 
+
+/* TIMELINE */
+
 .timeline {
+
     position: relative;
+
     padding-left: 35px;
 }
 
 .timeline::before {
+
     content: "";
+
     position: absolute;
+
     left: 5px;
     top: 5px;
+
     width: 1px;
     height: 100%;
+
     background: #d8b5b5;
 }
 
 .timeline-item {
+
     position: relative;
+
     margin-bottom: 35px;
 }
 
 .timeline-item::before {
+
     content: "♥";
+
     position: absolute;
+
     left: -38px;
     top: 0;
+
     color: #ad7575;
+
     font-size: 15px;
+
     background: #fdf0ef;
 }
 
 .timeline-item h3 {
+
     color: #70464d;
+
     font-size: 27px;
+
     margin-bottom: 7px;
+
     font-weight: 500;
 }
 
 .timeline-item p {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 19px;
+
     line-height: 1.45;
 }
 
@@ -339,40 +439,58 @@ h3 {
 ========================= */
 
 .memories {
+
     padding: 110px 6%;
+
     text-align: center;
+
     background: #fff9f8;
 }
 
 .memories-heading {
+
     max-width: 700px;
+
     margin: auto;
 }
 
 .memories h2 {
+
     font-size: 65px;
+
     color: #70464d;
+
     line-height: 1;
+
     margin-bottom: 60px;
 }
 
 .photo-grid {
+
     max-width: 1300px;
+
     margin: auto;
 
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
 }
 
 .photo-grid img {
+
     width: 100%;
+
     height: 420px;
+
     object-fit: cover;
+
     transition: transform 0.5s ease;
 }
 
 .photo-grid img:hover {
+
     transform: scale(1.03);
 }
 
@@ -382,49 +500,78 @@ h3 {
 ========================= */
 
 .love-letter {
+
     padding: 120px 6%;
+
     background: #fdf0ef;
+
     display: flex;
+
     justify-content: center;
 }
 
 .letter-card {
+
     width: 100%;
+
     max-width: 850px;
+
     background: white;
+
     padding: 80px;
-    box-shadow: 0 20px 60px rgba(110, 65, 72, 0.08);
+
+    box-shadow:
+        0 20px 60px rgba(110, 65, 72, 0.08);
+
     text-align: center;
+
     position: relative;
 }
 
 .letter-card::before {
+
     content: "♥";
+
     position: absolute;
+
     top: 25px;
     left: 50%;
+
     transform: translateX(-50%);
+
     color: #d5a3a3;
 }
 
 .letter-card h2 {
+
     font-size: 55px;
+
     color: #70464d;
+
     margin-bottom: 30px;
 }
 
 .letter-card p {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 21px;
+
     line-height: 1.7;
+
     margin-bottom: 20px;
 }
 
 .signature {
+
     margin-top: 35px;
+
     color: #9c6262;
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 25px;
+
     font-style: italic;
 }
 
@@ -434,11 +581,17 @@ h3 {
 ========================= */
 
 .quote-section {
+
     min-height: 600px;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     text-align: center;
+
     padding: 50px;
 
     color: white;
@@ -453,38 +606,52 @@ h3 {
 }
 
 .quote-content {
+
     max-width: 850px;
 }
 
 .quote-content p {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: clamp(35px, 5vw, 65px);
+
     line-height: 1.1;
+
     font-style: italic;
 }
 
 .quote-content span {
+
     display: block;
+
     margin-top: 25px;
+
     font-family: 'Montserrat', sans-serif;
+
     font-size: 13px;
+
     letter-spacing: 3px;
 }
 
 
 /* =========================
-   DESCRIBE SECTION
+   DESCRIBE YOU
    CONTENT LEFT / IMAGE RIGHT
 ========================= */
 
 .describe-section {
+
     padding: 110px 6%;
+
     background: #fff9f8;
 }
 
 .describe-wrapper {
+
     width: 100%;
     max-width: 1400px;
+
     margin: auto;
 
     display: flex !important;
@@ -494,47 +661,76 @@ h3 {
     align-items: center;
 }
 
+
+/* CONTENT LEFT */
+
 .describe-content {
+
     width: 50% !important;
     flex: 0 0 50% !important;
+
     padding: 60px 80px 60px 50px;
 }
 
 .describe-content h2 {
+
     font-size: 62px;
+
     color: #70464d;
+
     line-height: 0.95;
+
     font-weight: 500;
+
     margin-bottom: 35px;
 }
 
 .describe-content p {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 21px;
+
     line-height: 1.6;
+
     margin-bottom: 20px;
 }
 
+
+/* IMAGE RIGHT */
+
 .describe-image {
+
     width: 50% !important;
     flex: 0 0 50% !important;
+
     position: relative;
 }
 
 .describe-image img {
+
     width: 100%;
+
     height: 570px;
+
     object-fit: cover;
+
     position: relative;
+
     z-index: 1;
 }
 
 .describe-image::after {
+
     content: "";
+
     position: absolute;
+
     width: 100%;
     height: 100%;
+
     border: 1px solid #d8b5b5;
+
     right: -10px;
     top: 25px;
 }
@@ -545,25 +741,36 @@ h3 {
 ========================= */
 
 .future {
+
     padding: 120px 20px;
+
     text-align: center;
+
     background: #fdf0ef;
 }
 
 .future-content {
+
     max-width: 850px;
+
     margin: auto;
 }
 
 .future h2 {
+
     font-size: 70px;
+
     color: #70464d;
+
     margin-bottom: 30px;
 }
 
 .future p {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 23px;
+
     line-height: 1.6;
 }
 
@@ -573,10 +780,15 @@ h3 {
 ========================= */
 
 .final-section {
+
     min-height: 90vh;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     text-align: center;
 
     color: white;
@@ -591,19 +803,27 @@ h3 {
 }
 
 .final-content {
+
     padding: 30px;
 }
 
 .final-content h2 {
+
     font-size: clamp(55px, 8vw, 95px);
+
     line-height: 0.95;
+
     font-weight: 500;
+
     margin-bottom: 35px;
 }
 
 .final-content p {
+
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 28px;
+
     line-height: 1.5;
 }
 
@@ -613,21 +833,31 @@ h3 {
 ========================= */
 
 footer {
+
     background: #5e3b42;
+
     color: #fceff0;
+
     text-align: center;
+
     padding: 45px 20px;
 }
 
 footer h3 {
+
     font-size: 32px;
+
     font-weight: 400;
+
     margin-bottom: 10px;
 }
 
 footer p {
+
     font-size: 10px;
+
     letter-spacing: 3px;
+
     opacity: 0.7;
 }
 
@@ -637,30 +867,48 @@ footer p {
 ========================= */
 
 @keyframes fadeUp {
+
     from {
+
         opacity: 0;
+
         transform: translateY(35px);
     }
 
     to {
+
         opacity: 1;
+
         transform: translateY(0);
     }
 }
 
 @keyframes floatHeart {
+
     0% {
-        transform: translateY(0) rotate(0deg);
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
         opacity: 0.3;
     }
 
     50% {
-        transform: translateY(-35px) rotate(10deg);
+
+        transform:
+            translateY(-35px)
+            rotate(10deg);
+
         opacity: 0.8;
     }
 
     100% {
-        transform: translateY(0) rotate(0deg);
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
         opacity: 0.3;
     }
 }
@@ -673,203 +921,269 @@ footer p {
 @media (max-width: 750px) {
 
     .hero h1 {
+
         font-size: 60px;
     }
 
     .hero-quote {
+
         font-size: 20px;
     }
 
     .hero-story {
+
         font-size: 11px;
     }
 
-    /* Chapter */
+
+    /* CHAPTER ONE */
 
     .chapter-one {
+
         padding: 70px 20px;
     }
 
     .chapter-one-wrapper {
+
         display: flex !important;
+
         flex-direction: column !important;
+
         flex-wrap: nowrap !important;
     }
 
     .chapter-one-content {
+
         width: 100% !important;
+
         flex: 0 0 100% !important;
+
         padding: 20px 10px 60px;
     }
 
     .chapter-one-image {
+
         width: 100% !important;
+
         flex: 0 0 100% !important;
     }
 
     .chapter-one-image img {
+
         height: 450px;
     }
 
     .chapter-one h2 {
+
         font-size: 50px;
     }
 
-    /* Journey */
+
+    /* JOURNEY */
 
     .journey {
+
         padding: 70px 20px;
     }
 
     .journey-wrapper {
+
         display: flex !important;
+
         flex-direction: column !important;
+
         flex-wrap: nowrap !important;
     }
 
     .journey-image {
+
         width: 100% !important;
+
         flex: 0 0 100% !important;
+
         margin-bottom: 60px;
     }
 
     .journey-image img {
+
         height: 450px;
     }
 
     .journey-content {
+
         width: 100% !important;
+
         flex: 0 0 100% !important;
+
         padding: 10px;
     }
 
     .journey-content h2 {
+
         font-size: 50px;
     }
 
-    /* Memories */
+
+    /* MEMORIES */
 
     .memories {
+
         padding: 80px 20px;
     }
 
     .memories h2 {
+
         font-size: 50px;
     }
 
     .photo-grid {
+
         grid-template-columns: 1fr;
     }
 
     .photo-grid img {
+
         height: 450px;
     }
 
-    /* Letter */
+
+    /* LOVE LETTER */
 
     .love-letter {
+
         padding: 70px 20px;
     }
 
     .letter-card {
+
         padding: 60px 25px;
     }
 
     .letter-card h2 {
+
         font-size: 45px;
     }
 
-    /* Quote */
+
+    /* QUOTE */
 
     .quote-section {
+
         min-height: 500px;
     }
 
     .quote-content p {
+
         font-size: 40px;
     }
 
-    /* Describe */
+
+    /* DESCRIBE */
 
     .describe-section {
+
         padding: 70px 20px;
     }
 
     .describe-wrapper {
+
         display: flex !important;
+
         flex-direction: column !important;
+
         flex-wrap: nowrap !important;
     }
 
     .describe-content {
+
         width: 100% !important;
+
         flex: 0 0 100% !important;
+
         padding: 10px 10px 60px;
     }
 
     .describe-content h2 {
+
         font-size: 50px;
     }
 
     .describe-image {
+
         width: 100% !important;
+
         flex: 0 0 100% !important;
     }
 
     .describe-image img {
+
         height: 450px;
     }
 
-    /* Future */
+
+    /* FUTURE */
 
     .future {
+
         padding: 80px 20px;
     }
 
     .future h2 {
+
         font-size: 55px;
     }
 
     .future p {
+
         font-size: 20px;
     }
 
-    /* Final */
+
+    /* FINAL */
 
     .final-section {
+
         min-height: 75vh;
     }
 
     .final-content h2 {
+
         font-size: 58px;
     }
 
     .final-content p {
+
         font-size: 22px;
     }
 
 }
 
 
-/* Extra small screens */
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media (max-width: 450px) {
 
     .hero h1 {
+
         font-size: 50px;
     }
 
     .chapter-one h2,
     .journey-content h2,
     .describe-content h2 {
+
         font-size: 45px;
     }
 
     .memories h2 {
+
         font-size: 44px;
     }
 
     .letter-card h2 {
+
         font-size: 40px;
     }
 
@@ -930,6 +1244,7 @@ footer p {
 
     <div class="chapter-one-wrapper">
 
+
         <!-- CONTENT LEFT -->
 
         <div class="chapter-one-content">
@@ -977,9 +1292,11 @@ footer p {
 
         <div class="chapter-one-image">
 
+            <!-- YOUR COMPUTER IMAGE -->
+
             <img
-                src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=85"
-                alt="Romantic couple"
+                src="park.png"
+                alt="Our beautiful memory"
             >
 
         </div>
@@ -996,6 +1313,7 @@ footer p {
 <section class="journey">
 
     <div class="journey-wrapper">
+
 
         <!-- IMAGE LEFT -->
 
@@ -1023,6 +1341,7 @@ footer p {
             </h2>
 
             <div class="timeline">
+
 
                 <div class="timeline-item">
 
@@ -1093,6 +1412,7 @@ footer p {
                     </p>
 
                 </div>
+
 
             </div>
 
@@ -1214,12 +1534,12 @@ footer p {
 
 <!-- =========================
      DESCRIBE YOU
-     CONTENT LEFT / IMAGE RIGHT
 ========================= -->
 
 <section class="describe-section">
 
     <div class="describe-wrapper">
+
 
         <!-- CONTENT LEFT -->
 
