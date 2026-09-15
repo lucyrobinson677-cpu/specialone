@@ -1,1676 +1,1340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>He Is My Comfort Zone ♥</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #fff9f8;
-    color: #624d4d;
-    overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-h1,
-h2,
-h3 {
-    font-family: 'Cormorant Garamond', serif;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 100vh;
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    color: white;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            rgba(70, 35, 42, 0.45),
-            rgba(70, 35, 42, 0.55)
-        ),
-        url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=2000&q=90")
-        center/cover no-repeat;
-}
-
-.hero-content {
-    max-width: 850px;
-    padding: 40px 25px;
-
-    position: relative;
-    z-index: 2;
-
-    animation: fadeUp 1.5s ease;
-}
-
-.hero-small {
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    opacity: 0.9;
-}
-
-.hero h1 {
-    font-size: clamp(60px, 9vw, 110px);
-    line-height: 0.9;
-    font-weight: 500;
-    margin-bottom: 35px;
-}
-
-.hero h1 span {
-    color: #ffdfe2;
-}
-
-.hero-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    line-height: 1.5;
-
-    max-width: 650px;
-    margin: auto;
-
-    font-style: italic;
-}
-
-.hero-story {
-    margin-top: 30px;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-.scroll-text {
-    margin-top: 60px;
-    font-size: 10px;
-    letter-spacing: 4px;
-    opacity: 0.8;
-}
-
-
-/* FLOATING HEARTS */
-
-.heart {
-    position: absolute;
-    color: rgba(255, 220, 225, 0.65);
-    font-size: 20px;
-
-    animation: floatHeart 8s infinite ease-in-out;
-}
-
-.heart.one {
-    left: 10%;
-    top: 25%;
-}
-
-.heart.two {
-    right: 15%;
-    top: 35%;
-    animation-delay: 2s;
-}
-
-.heart.three {
-    left: 20%;
-    bottom: 20%;
-    animation-delay: 4s;
-}
-
-.heart.four {
-    right: 25%;
-    bottom: 15%;
-    animation-delay: 1s;
-}
-
-
-/* =========================
-   CHAPTER ONE
-   CONTENT LEFT / IMAGE RIGHT
-========================= */
-
-.chapter-one {
-    padding: 100px 6%;
-    background: #fff9f8;
-}
-
-.chapter-one-wrapper {
-
-    width: 100%;
-    max-width: 1400px;
-
-    margin: auto;
-
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-
-    align-items: center;
-}
-
-
-/* LEFT CONTENT */
-
-.chapter-one-content {
-
-    width: 50% !important;
-    flex: 0 0 50% !important;
-
-    padding: 70px;
-}
-
-
-/* RIGHT IMAGE */
-
-.chapter-one-image {
-
-    width: 50% !important;
-    flex: 0 0 50% !important;
-
-    position: relative;
-}
-
-.chapter-one-image img {
-
-    width: 100%;
-    height: 600px;
-
-    object-fit: cover;
-
-    position: relative;
-    z-index: 1;
-}
-
-
-/* IMAGE BORDER */
-
-.chapter-one-image::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    border: 1px solid #d8b5b5;
-
-    left: -15px;
-    top: -15px;
-
-    z-index: 0;
-}
-
-
-/* CHAPTER TEXT */
-
-.section-label {
-
-    font-size: 11px;
-    letter-spacing: 4px;
-
-    color: #ad7575;
-
-    margin-bottom: 18px;
-}
-
-.chapter-one h2 {
-
-    font-size: 65px;
-
-    color: #70464d;
-
-    line-height: 0.95;
-
-    font-weight: 500;
-
-    margin-bottom: 35px;
-}
-
-.chapter-one p {
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 21px;
-
-    line-height: 1.6;
-
-    margin-bottom: 20px;
-}
-
-.highlight {
-
-    color: #9c6262;
-
-    font-style: italic;
-}
-
-
-/* =========================
-   OUR JOURNEY
-   IMAGE LEFT / CONTENT RIGHT
-========================= */
-
-.journey {
-
-    background: #fdf0ef;
-
-    padding: 110px 6%;
-}
-
-.journey-wrapper {
-
-    width: 100%;
-    max-width: 1400px;
-
-    margin: auto;
-
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-
-    align-items: center;
-}
-
-
-/* IMAGE LEFT */
-
-.journey-image {
-
-    width: 50% !important;
-    flex: 0 0 50% !important;
-
-    position: relative;
-}
-
-.journey-image img {
-
-    width: 100%;
-    height: 600px;
-
-    object-fit: cover;
-
-    position: relative;
-    z-index: 1;
-}
-
-.journey-image::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    border: 1px solid #c99e9e;
-
-    left: -10px;
-    bottom: -15px;
-}
-
-
-/* CONTENT RIGHT */
-
-.journey-content {
-
-    width: 50% !important;
-    flex: 0 0 50% !important;
-
-    padding: 60px 80px;
-}
-
-.journey-content h2 {
-
-    font-size: 65px;
-
-    color: #70464d;
-
-    line-height: 0.95;
-
-    font-weight: 500;
-
-    margin-bottom: 45px;
-}
-
-
-/* TIMELINE */
-
-.timeline {
-
-    position: relative;
-
-    padding-left: 35px;
-}
-
-.timeline::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: 5px;
-    top: 5px;
-
-    width: 1px;
-    height: 100%;
-
-    background: #d8b5b5;
-}
-
-.timeline-item {
-
-    position: relative;
-
-    margin-bottom: 35px;
-}
-
-.timeline-item::before {
-
-    content: "♥";
-
-    position: absolute;
-
-    left: -38px;
-    top: 0;
-
-    color: #ad7575;
-
-    font-size: 15px;
-
-    background: #fdf0ef;
-}
-
-.timeline-item h3 {
-
-    color: #70464d;
-
-    font-size: 27px;
-
-    margin-bottom: 7px;
-
-    font-weight: 500;
-}
-
-.timeline-item p {
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 19px;
-
-    line-height: 1.45;
-}
-
-
-/* =========================
-   MEMORIES
-========================= */
-
-.memories {
-
-    padding: 110px 6%;
-
-    text-align: center;
-
-    background: #fff9f8;
-}
-
-.memories-heading {
-
-    max-width: 700px;
-
-    margin: auto;
-}
-
-.memories h2 {
-
-    font-size: 65px;
-
-    color: #70464d;
-
-    line-height: 1;
-
-    margin-bottom: 60px;
-}
-
-.photo-grid {
-
-    max-width: 1300px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-.photo-grid img {
-
-    width: 100%;
-
-    height: 420px;
-
-    object-fit: cover;
-
-    transition: transform 0.5s ease;
-}
-
-.photo-grid img:hover {
-
-    transform: scale(1.03);
-}
-
-
-/* =========================
-   LOVE LETTER
-========================= */
-
-.love-letter {
-
-    padding: 120px 6%;
-
-    background: #fdf0ef;
-
-    display: flex;
-
-    justify-content: center;
-}
-
-.letter-card {
-
-    width: 100%;
-
-    max-width: 850px;
-
-    background: white;
-
-    padding: 80px;
-
-    box-shadow:
-        0 20px 60px rgba(110, 65, 72, 0.08);
-
-    text-align: center;
-
-    position: relative;
-}
-
-.letter-card::before {
-
-    content: "♥";
-
-    position: absolute;
-
-    top: 25px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    color: #d5a3a3;
-}
-
-.letter-card h2 {
-
-    font-size: 55px;
-
-    color: #70464d;
-
-    margin-bottom: 30px;
-}
-
-.letter-card p {
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 21px;
-
-    line-height: 1.7;
-
-    margin-bottom: 20px;
-}
-
-.signature {
-
-    margin-top: 35px;
-
-    color: #9c6262;
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 25px;
-
-    font-style: italic;
-}
-
-
-/* =========================
-   QUOTE
-========================= */
-
-.quote-section {
-
-    min-height: 600px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding: 50px;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            rgba(65, 35, 40, 0.55),
-            rgba(65, 35, 40, 0.55)
-        ),
-        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=90")
-        center/cover no-repeat;
-}
-
-.quote-content {
-
-    max-width: 850px;
-}
-
-.quote-content p {
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: clamp(35px, 5vw, 65px);
-
-    line-height: 1.1;
-
-    font-style: italic;
-}
-
-.quote-content span {
-
-    display: block;
-
-    margin-top: 25px;
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 13px;
-
-    letter-spacing: 3px;
-}
-
-
-/* =========================
-   DESCRIBE YOU
-   CONTENT LEFT / IMAGE RIGHT
-========================= */
-
-.describe-section {
-
-    padding: 110px 6%;
-
-    background: #fff9f8;
-}
-
-.describe-wrapper {
-
-    width: 100%;
-    max-width: 1400px;
-
-    margin: auto;
-
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-
-    align-items: center;
-}
-
-
-/* CONTENT LEFT */
-
-.describe-content {
-
-    width: 50% !important;
-    flex: 0 0 50% !important;
-
-    padding: 60px 80px 60px 50px;
-}
-
-.describe-content h2 {
-
-    font-size: 62px;
-
-    color: #70464d;
-
-    line-height: 0.95;
-
-    font-weight: 500;
-
-    margin-bottom: 35px;
-}
-
-.describe-content p {
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 21px;
-
-    line-height: 1.6;
-
-    margin-bottom: 20px;
-}
-
-
-/* IMAGE RIGHT */
-
-.describe-image {
-
-    width: 50% !important;
-    flex: 0 0 50% !important;
-
-    position: relative;
-}
-
-.describe-image img {
-
-    width: 100%;
-
-    height: 570px;
-
-    object-fit: cover;
-
-    position: relative;
-
-    z-index: 1;
-}
-
-.describe-image::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    border: 1px solid #d8b5b5;
-
-    right: -10px;
-    top: 25px;
-}
-
-
-/* =========================
-   FUTURE
-========================= */
-
-.future {
-
-    padding: 120px 20px;
-
-    text-align: center;
-
-    background: #fdf0ef;
-}
-
-.future-content {
-
-    max-width: 850px;
-
-    margin: auto;
-}
-
-.future h2 {
-
-    font-size: 70px;
-
-    color: #70464d;
-
-    margin-bottom: 30px;
-}
-
-.future p {
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 23px;
-
-    line-height: 1.6;
-}
-
-
-/* =========================
-   FINAL
-========================= */
-
-.final-section {
-
-    min-height: 90vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            rgba(65, 35, 40, 0.48),
-            rgba(65, 35, 40, 0.58)
-        ),
-        url("https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=2000&q=90")
-        center/cover no-repeat;
-}
-
-.final-content {
-
-    padding: 30px;
-}
-
-.final-content h2 {
-
-    font-size: clamp(55px, 8vw, 95px);
-
-    line-height: 0.95;
-
-    font-weight: 500;
-
-    margin-bottom: 35px;
-}
-
-.final-content p {
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 28px;
-
-    line-height: 1.5;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-
-    background: #5e3b42;
-
-    color: #fceff0;
-
-    text-align: center;
-
-    padding: 45px 20px;
-}
-
-footer h3 {
-
-    font-size: 32px;
-
-    font-weight: 400;
-
-    margin-bottom: 10px;
-}
-
-footer p {
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-
-    opacity: 0.7;
-}
-
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-@keyframes fadeUp {
-
-    from {
-
-        opacity: 0;
-
-        transform: translateY(35px);
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
-    }
-}
-
-@keyframes floatHeart {
-
-    0% {
-
-        transform:
-            translateY(0)
-            rotate(0deg);
-
-        opacity: 0.3;
-    }
-
-    50% {
-
-        transform:
-            translateY(-35px)
-            rotate(10deg);
-
-        opacity: 0.8;
-    }
-
-    100% {
-
-        transform:
-            translateY(0)
-            rotate(0deg);
-
-        opacity: 0.3;
-    }
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 750px) {
-
-    .hero h1 {
-
-        font-size: 60px;
-    }
-
-    .hero-quote {
-
-        font-size: 20px;
-    }
-
-    .hero-story {
-
-        font-size: 11px;
-    }
-
-
-    /* CHAPTER ONE */
-
-    .chapter-one {
-
-        padding: 70px 20px;
-    }
-
-    .chapter-one-wrapper {
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        flex-wrap: nowrap !important;
-    }
-
-    .chapter-one-content {
-
-        width: 100% !important;
-
-        flex: 0 0 100% !important;
-
-        padding: 20px 10px 60px;
-    }
-
-    .chapter-one-image {
-
-        width: 100% !important;
-
-        flex: 0 0 100% !important;
-    }
-
-    .chapter-one-image img {
-
-        height: 450px;
-    }
-
-    .chapter-one h2 {
-
-        font-size: 50px;
-    }
-
-
-    /* JOURNEY */
-
-    .journey {
-
-        padding: 70px 20px;
-    }
-
-    .journey-wrapper {
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        flex-wrap: nowrap !important;
-    }
-
-    .journey-image {
-
-        width: 100% !important;
-
-        flex: 0 0 100% !important;
-
-        margin-bottom: 60px;
-    }
-
-    .journey-image img {
-
-        height: 450px;
-    }
-
-    .journey-content {
-
-        width: 100% !important;
-
-        flex: 0 0 100% !important;
-
-        padding: 10px;
-    }
-
-    .journey-content h2 {
-
-        font-size: 50px;
-    }
-
-
-    /* MEMORIES */
-
-    .memories {
-
-        padding: 80px 20px;
-    }
-
-    .memories h2 {
-
-        font-size: 50px;
-    }
-
-    .photo-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    .photo-grid img {
-
-        height: 450px;
-    }
-
-
-    /* LOVE LETTER */
-
-    .love-letter {
-
-        padding: 70px 20px;
-    }
-
-    .letter-card {
-
-        padding: 60px 25px;
-    }
-
-    .letter-card h2 {
-
-        font-size: 45px;
-    }
-
-
-    /* QUOTE */
-
-    .quote-section {
-
-        min-height: 500px;
-    }
-
-    .quote-content p {
-
-        font-size: 40px;
-    }
-
-
-    /* DESCRIBE */
-
-    .describe-section {
-
-        padding: 70px 20px;
-    }
-
-    .describe-wrapper {
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        flex-wrap: nowrap !important;
-    }
-
-    .describe-content {
-
-        width: 100% !important;
-
-        flex: 0 0 100% !important;
-
-        padding: 10px 10px 60px;
-    }
-
-    .describe-content h2 {
-
-        font-size: 50px;
-    }
-
-    .describe-image {
-
-        width: 100% !important;
-
-        flex: 0 0 100% !important;
-    }
-
-    .describe-image img {
-
-        height: 450px;
-    }
-
-
-    /* FUTURE */
-
-    .future {
-
-        padding: 80px 20px;
-    }
-
-    .future h2 {
-
-        font-size: 55px;
-    }
-
-    .future p {
-
-        font-size: 20px;
-    }
-
-
-    /* FINAL */
-
-    .final-section {
-
-        min-height: 75vh;
-    }
-
-    .final-content h2 {
-
-        font-size: 58px;
-    }
-
-    .final-content p {
-
-        font-size: 22px;
-    }
-
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 450px) {
-
-    .hero h1 {
-
-        font-size: 50px;
-    }
-
-    .chapter-one h2,
-    .journey-content h2,
-    .describe-content h2 {
-
-        font-size: 45px;
-    }
-
-    .memories h2 {
-
-        font-size: 44px;
-    }
-
-    .letter-card h2 {
-
-        font-size: 40px;
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>He Is My Comfort Zone</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fff9f8;
+            color: #624d4d;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background:
+                linear-gradient(rgba(74, 42, 48, 0.38), rgba(74, 42, 48, 0.48)),
+                url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1800&q=90")
+                center/cover no-repeat;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-small {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .hero h1 {
+            font-size: clamp(60px, 9vw, 120px);
+            line-height: 0.9;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            display: block;
+        }
+
+        .hero-quote {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 25px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .hero-story {
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+        }
+
+        .scroll-text {
+            font-size: 10px;
+            letter-spacing: 4px;
+            opacity: 0.9;
+        }
+
+        /* Floating Hearts */
+
+        .heart {
+            position: absolute;
+            color: rgba(255,255,255,0.75);
+            font-size: 20px;
+            animation: floatHeart 7s infinite ease-in-out;
+        }
+
+        .heart.one {
+            left: 12%;
+            top: 22%;
+        }
+
+        .heart.two {
+            right: 15%;
+            top: 28%;
+            animation-delay: 2s;
+        }
+
+        .heart.three {
+            left: 20%;
+            bottom: 20%;
+            animation-delay: 4s;
+        }
+
+        .heart.four {
+            right: 20%;
+            bottom: 15%;
+            animation-delay: 1s;
+        }
+
+        @keyframes floatHeart {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-25px) rotate(8deg);
+            }
+        }
+
+        /* =========================
+           COMMON
+        ========================= */
+
+        .section-label {
+            color: #ad7575;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .section-title {
+            color: #6e4148;
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1;
+            font-weight: 500;
+            margin-bottom: 28px;
+        }
+
+        .section-text {
+            font-size: 15px;
+            line-height: 2;
+            color: #705b5b;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           CHAPTER ONE
+        ========================= */
+
+        .chapter-one {
+            padding: 100px 6%;
+            background: #fff9f8;
+        }
+
+        .chapter-one-wrapper {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+
+            align-items: center;
+            gap: 70px;
+        }
+
+        .chapter-one-content {
+            width: 50% !important;
+            flex: 0 0 50% !important;
+            padding-right: 30px;
+        }
+
+        .chapter-one-image {
+            width: 50% !important;
+            flex: 0 0 50% !important;
+            position: relative;
+        }
+
+        .chapter-one-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 2px;
+            box-shadow: 20px 20px 0 #f2dcdc;
+        }
+
+        .chapter-one-image::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #d8b5b5;
+            top: 18px;
+            left: 18px;
+            z-index: 0;
+        }
+
+        .chapter-one-image img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .highlight {
+            border-left: 2px solid #c48d8d;
+            padding: 15px 0 15px 22px;
+            margin: 30px 0;
+            color: #70464d;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 25px;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           OUR JOURNEY
+        ========================= */
+
+        .journey {
+            padding: 110px 6%;
+            background: #fdf0ef;
+        }
+
+        .journey-wrapper {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+
+            align-items: center;
+            gap: 70px;
+        }
+
+        .journey-image {
+            width: 50% !important;
+            flex: 0 0 50% !important;
+            position: relative;
+        }
+
+        .journey-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 2px;
+            box-shadow: -20px 20px 0 #efd4d4;
+        }
+
+        .journey-image::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #d8b5b5;
+            top: 18px;
+            left: -18px;
+        }
+
+        .journey-image img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .journey-content {
+            width: 50% !important;
+            flex: 0 0 50% !important;
+        }
+
+        .timeline {
+            margin-top: 35px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 30px 35px;
+            border-left: 1px solid #d8b5b5;
+        }
+
+        .timeline-item:last-child {
+            border-left: none;
+        }
+
+        .timeline-item::before {
+            content: "♥";
+            position: absolute;
+            left: -8px;
+            top: 0;
+            font-size: 12px;
+            color: #b77979;
+            background: #fdf0ef;
+        }
+
+        .timeline-item h3 {
+            color: #6e4148;
+            font-size: 25px;
+            margin-bottom: 7px;
+            font-weight: 500;
+        }
+
+        .timeline-item p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #765f5f;
+        }
+
+        /* =========================
+           MEMORIES
+        ========================= */
+
+        .memories {
+            padding: 110px 6%;
+            background: #fff9f8;
+            text-align: center;
+        }
+
+        .memories-header {
+            max-width: 700px;
+            margin: 0 auto 55px;
+        }
+
+        .memory-grid {
+            max-width: 1300px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .memory-card {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .memory-card img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .memory-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           LOVE LETTER
+        ========================= */
+
+        .letter-section {
+            padding: 120px 20px;
+            background: #fdf0ef;
+            display: flex;
+            justify-content: center;
+        }
+
+        .letter-card {
+            max-width: 850px;
+            background: white;
+            padding: 75px 80px;
+            box-shadow: 0 20px 60px rgba(99, 61, 61, 0.08);
+            text-align: center;
+            position: relative;
+        }
+
+        .letter-card::before {
+            content: "♥";
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #d2a0a0;
+            font-size: 20px;
+        }
+
+        .letter-card h2 {
+            font-size: 48px;
+            color: #6e4148;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .letter-card p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 23px;
+            line-height: 1.7;
+            color: #725d5d;
+            margin-bottom: 20px;
+        }
+
+        .signature {
+            margin-top: 35px;
+            color: #9c6262;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 25px;
+            font-style: italic;
+        }
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote-section {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+
+            background:
+                linear-gradient(rgba(67, 40, 44, 0.52), rgba(67, 40, 44, 0.52)),
+                url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=90")
+                center/cover no-repeat;
+
+            color: white;
+        }
+
+        .quote-content {
+            max-width: 850px;
+        }
+
+        .quote-content p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(38px, 5vw, 65px);
+            line-height: 1.15;
+            font-style: italic;
+        }
+
+        .quote-content span {
+            display: block;
+            margin-top: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           DESCRIBE YOU
+        ========================= */
+
+        .describe-section {
+            padding: 110px 6%;
+            background: #fff9f8;
+        }
+
+        .describe-wrapper {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+
+            align-items: center;
+            gap: 70px;
+        }
+
+        .describe-content {
+            width: 50% !important;
+            flex: 0 0 50% !important;
+            padding-right: 30px;
+        }
+
+        .describe-image {
+            width: 50% !important;
+            flex: 0 0 50% !important;
+            position: relative;
+        }
+
+        .describe-image img {
+            width: 100%;
+            height: 570px;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+            box-shadow: 20px 20px 0 #f2dcdc;
+        }
+
+        .describe-image::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #d8b5b5;
+            top: 18px;
+            left: 18px;
+        }
+
+        .describe-title {
+            color: #6e4148;
+            font-size: clamp(45px, 5vw, 70px);
+            line-height: 0.95;
+            margin-bottom: 35px;
+        }
+
+        .describe-title span {
+            display: block;
+        }
+
+        /* =========================
+           FUTURE
+        ========================= */
+
+        .future {
+            padding: 120px 20px;
+            background: #fdf0ef;
+            text-align: center;
+        }
+
+        .future-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .future h2 {
+            color: #6e4148;
+            font-size: clamp(48px, 6vw, 75px);
+            margin-bottom: 25px;
+        }
+
+        .future p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 25px;
+            line-height: 1.7;
+            color: #725d5d;
+        }
+
+        /* =========================
+           FINAL
+        ========================= */
+
+        .final-section {
+            min-height: 90vh;
+            padding: 100px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+
+            background:
+                linear-gradient(rgba(67, 38, 44, 0.58), rgba(67, 38, 44, 0.58)),
+                url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1800&q=90")
+                center/cover no-repeat;
+        }
+
+        .final-content {
+            max-width: 900px;
+        }
+
+        .final-small {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .final-section h2 {
+            font-size: clamp(55px, 7vw, 90px);
+            line-height: 0.95;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .final-section p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #5e3b42;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        footer p {
+            font-size: 9px;
+            letter-spacing: 3px;
+            opacity: 0.7;
+        }
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        .fade-up {
+            animation: fadeUp 1.2s ease both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .chapter-one-wrapper,
+            .journey-wrapper,
+            .describe-wrapper {
+                gap: 40px;
+            }
+
+            .chapter-one-content,
+            .journey-content,
+            .describe-content {
+                padding-right: 0;
+            }
+
+            .chapter-one-image img,
+            .journey-image img {
+                height: 500px;
+            }
+
+            .describe-image img {
+                height: 500px;
+            }
+
+            .letter-card {
+                padding: 60px 45px;
+            }
+
+            .memory-card img {
+                height: 400px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            .hero {
+                min-height: 100svh;
+            }
+
+            .hero h1 {
+                font-size: 65px;
+            }
+
+            .hero-quote {
+                font-size: 21px;
+            }
+
+            .chapter-one,
+            .journey,
+            .describe-section,
+            .memories {
+                padding: 75px 20px;
+            }
+
+            .chapter-one-wrapper,
+            .journey-wrapper,
+            .describe-wrapper {
+                display: flex !important;
+                flex-direction: column !important;
+                flex-wrap: nowrap !important;
+                gap: 55px;
+            }
+
+            .chapter-one-content,
+            .chapter-one-image,
+            .journey-content,
+            .journey-image,
+            .describe-content,
+            .describe-image {
+                width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+
+            .chapter-one-image img,
+            .journey-image img,
+            .describe-image img {
+                height: 500px;
+            }
+
+            /* Mobile order */
+
+            .chapter-one-content {
+                order: 1;
+            }
+
+            .chapter-one-image {
+                order: 2;
+            }
+
+            .journey-image {
+                order: 1;
+            }
+
+            .journey-content {
+                order: 2;
+            }
+
+            .describe-content {
+                order: 1;
+            }
+
+            .describe-image {
+                order: 2;
+            }
+
+            .memory-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .memory-card img {
+                height: 500px;
+            }
+
+            .letter-card {
+                padding: 65px 25px;
+            }
+
+            .letter-card h2 {
+                font-size: 40px;
+            }
+
+            .letter-card p {
+                font-size: 21px;
+            }
+
+            .quote-section {
+                min-height: 500px;
+            }
+
+            .future {
+                padding: 80px 25px;
+            }
+
+            .future p {
+                font-size: 22px;
+            }
+
+            .final-section {
+                min-height: 80vh;
+            }
+
+            .final-section p {
+                font-size: 25px;
+            }
+        }
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 450px) {
+
+            .hero h1 {
+                font-size: 54px;
+            }
+
+            .hero-small {
+                font-size: 9px;
+                letter-spacing: 3px;
+            }
+
+            .hero-quote {
+                font-size: 19px;
+            }
+
+            .section-title {
+                font-size: 45px;
+            }
+
+            .chapter-one-image img,
+            .journey-image img,
+            .describe-image img {
+                height: 400px;
+            }
+
+            .memory-card img {
+                height: 400px;
+            }
+
+            .highlight {
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
+    <!-- =========================
+         HERO
+    ========================= -->
 
-<!-- =========================
-     HERO
-========================= -->
+    <section class="hero">
 
-<section class="hero">
+        <div class="heart one">♥</div>
+        <div class="heart two">♥</div>
+        <div class="heart three">♥</div>
+        <div class="heart four">♥</div>
 
-    <div class="heart one">♥</div>
-    <div class="heart two">♥</div>
-    <div class="heart three">♥</div>
-    <div class="heart four">♥</div>
+        <div class="hero-content fade-up">
 
-    <div class="hero-content">
-
-        <div class="hero-small">
-            My favourite place in this world
-        </div>
-
-        <h1>
-            He Is <span>♥</span><br>
-            My Comfort Zone
-        </h1>
-
-        <p class="hero-quote">
-            “In a world that can feel overwhelming,
-            he is the one place where my heart feels at home.”
-        </p>
-
-        <p class="hero-story">
-            This is our story...
-        </p>
-
-        <div class="scroll-text">
-            SCROLL TO OUR STORY ↓
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CHAPTER ONE
-========================= -->
-
-<section class="chapter-one">
-
-    <div class="chapter-one-wrapper">
-
-
-        <!-- CONTENT LEFT -->
-
-        <div class="chapter-one-content">
-
-            <div class="section-label">
-                CHAPTER ONE
+            <div class="hero-small">
+                My favourite place in this world
             </div>
 
+            <h1>
+                He Is ♥
+                <span>My Comfort Zone</span>
+            </h1>
+
+            <p class="hero-quote">
+                “In a world that can feel overwhelming,
+                he is the one place where my heart feels at home.”
+            </p>
+
+            <p class="hero-story">
+                This is our story...
+            </p>
+
+            <div class="scroll-text">
+                SCROLL TO OUR STORY ↓
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER ONE
+    ========================= -->
+
+    <section class="chapter-one">
+
+        <div class="chapter-one-wrapper">
+
+            <!-- CONTENT LEFT -->
+
+            <div class="chapter-one-content">
+
+                <div class="section-label">
+                    Chapter One
+                </div>
+
+                <h2 class="section-title">
+                    Where It All Began
+                </h2>
+
+                <p class="section-text">
+                    Sometimes the most beautiful stories begin
+                    in the most unexpected ways.
+                </p>
+
+                <p class="section-text">
+                    I didn't know that meeting you would become
+                    the beginning of something that would mean
+                    so much to me.
+                </p>
+
+                <p class="section-text">
+                    At first, you were just someone I talked to.
+                    Then slowly, our conversations became something
+                    I looked forward to every day.
+                </p>
+
+                <div class="highlight">
+                    And somewhere between all those little moments,
+                    you became my favourite part of every day.
+                </div>
+
+                <p class="section-text">
+                    I never planned to fall for you.
+                    It just happened.
+                </p>
+
+            </div>
+
+
+            <!-- IMAGE RIGHT -->
+
+            <div class="chapter-one-image">
+
+                <!--
+                    IMPORTANT:
+                    Upload park.png to the SAME GitHub folder
+                    as this index.html file.
+                -->
+
+                <img
+                    src="./park.png"
+                    alt="Our beautiful memory"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         OUR JOURNEY
+    ========================= -->
+
+    <section class="journey">
+
+        <div class="journey-wrapper">
+
+            <!-- IMAGE LEFT -->
+
+            <div class="journey-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=85"
+                    alt="Our journey"
+                >
+
+            </div>
+
+
+            <!-- CONTENT RIGHT -->
+
+            <div class="journey-content">
+
+                <div class="section-label">
+                    Our Journey
+                </div>
+
+                <h2 class="section-title">
+                    Little Moments,
+                    Big Feelings
+                </h2>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <h3>
+                            The Day We Met
+                        </h3>
+
+                        <p>
+                            One ordinary day that quietly became
+                            the beginning of something extraordinary.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <h3>
+                            We Started Talking
+                        </h3>
+
+                        <p>
+                            Conversations became longer,
+                            smiles became more frequent,
+                            and somehow I started waiting
+                            for your messages.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <h3>
+                            I Fell For You
+                        </h3>
+
+                        <p>
+                            Somewhere between the laughs,
+                            conversations and little moments,
+                            my heart chose you.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <h3>
+                            Feeling At Home
+                        </h3>
+
+                        <p>
+                            With you, I discovered a feeling
+                            I didn't know I was looking for —
+                            peace.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <h3>
+                            Still Choosing You
+                        </h3>
+
+                        <p>
+                            And today, after every moment,
+                            I would still choose you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         OUR MEMORIES
+    ========================= -->
+
+    <section class="memories">
+
+        <div class="memories-header">
+
+            <div class="section-label">
+                Our Memories
+            </div>
+
+            <h2 class="section-title">
+                Moments I Want To
+                Keep Forever
+            </h2>
+
+        </div>
+
+
+        <div class="memory-grid">
+
+            <div class="memory-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85"
+                    alt="Beautiful memory"
+                >
+
+            </div>
+
+
+            <div class="memory-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=85"
+                    alt="Romantic memory"
+                >
+
+            </div>
+
+
+            <div class="memory-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
+                    alt="Couple memory"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOVE LETTER
+    ========================= -->
+
+    <section class="letter-section">
+
+        <div class="letter-card">
+
             <h2>
-                Where It<br>
-                All Began
+                To My Favourite Person,
             </h2>
 
             <p>
-                Sometimes the most beautiful stories begin
-                in the most unexpected ways.
+                You became my comfort zone without even trying.
+                The person I can talk to about everything,
+                laugh with about nothing, and simply sit beside
+                without needing to say a word.
             </p>
 
             <p>
-                I didn't know that meeting you would become
-                the beginning of something that would mean
-                so much to me.
+                You are my safe place.
+                My peace after a long day.
+                My favourite notification.
+                My favourite conversation.
+                And somehow, my favourite person.
             </p>
 
             <p>
-                At first, you were just someone I talked to.
-                Then slowly, our conversations became something
-                I looked forward to every day.
+                I don't know what the future holds,
+                but I know who I want beside me
+                while I discover it.
             </p>
 
-            <p class="highlight">
-                And somewhere between all those little moments,
-                you became my favourite part of every day.
-            </p>
+            <div class="signature">
+                With all my heart,<br>
+                Always yours ♥
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUOTE
+    ========================= -->
+
+    <section class="quote-section">
+
+        <div class="quote-content">
 
             <p>
-                I never planned to fall for you.
-                It just happened.
+                “Home isn't always a place.
+                Sometimes, it's a person.”
             </p>
 
-        </div>
-
-
-        <!-- IMAGE RIGHT -->
-
-        <div class="chapter-one-image">
-
-            <!-- YOUR COMPUTER IMAGE -->
-
-            <img
-                src="park.png"
-                alt="Our beautiful memory"
-            >
+            <span>
+                And for me, it's you.
+            </span>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     OUR JOURNEY
-========================= -->
+    <!-- =========================
+         IF I HAD TO DESCRIBE YOU
+    ========================= -->
 
-<section class="journey">
+    <section class="describe-section">
 
-    <div class="journey-wrapper">
+        <div class="describe-wrapper">
+
+            <!-- CONTENT LEFT -->
+
+            <div class="describe-content">
+
+                <div class="section-label">
+                    If I Had To Describe You
+                </div>
+
+                <h2 class="describe-title">
+
+                    <span>
+                        He Is My Peace.
+                    </span>
+
+                    <span>
+                        He Is My Home.
+                    </span>
+
+                    <span>
+                        He Is My Comfort Zone.
+                    </span>
+
+                </h2>
+
+                <p class="section-text">
+                    You are the person who makes everything
+                    feel a little softer.
+                </p>
+
+                <p class="section-text">
+                    With you, I don't have to pretend.
+                    I can simply be myself — completely,
+                    honestly and freely.
+                </p>
+
+                <p class="section-text">
+                    You are where my heart feels safe.
+                    Where my mind can finally be quiet.
+                    Where I can just breathe.
+                </p>
+
+                <div class="highlight">
+                    If comfort had a name,
+                    I think it would be yours.
+                </div>
+
+            </div>
 
 
-        <!-- IMAGE LEFT -->
+            <!-- IMAGE RIGHT -->
 
-        <div class="journey-image">
+            <div class="describe-image">
 
-            <img
-                src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=85"
-                alt="Couple walking together"
-            >
+                <img
+                    src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
+                    alt="Love and comfort"
+                >
+
+            </div>
 
         </div>
 
+    </section>
 
-        <!-- CONTENT RIGHT -->
 
-        <div class="journey-content">
+    <!-- =========================
+         OUR FUTURE
+    ========================= -->
+
+    <section class="future">
+
+        <div class="future-content">
 
             <div class="section-label">
-                OUR JOURNEY
+                Our Future
             </div>
 
             <h2>
-                Little Moments,<br>
-                Big Feelings
+                This Isn't The End
             </h2>
 
-            <div class="timeline">
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        The Day We Met
-                    </h3>
-
-                    <p>
-                        One ordinary day that quietly became
-                        the beginning of something extraordinary.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        We Started Talking
-                    </h3>
-
-                    <p>
-                        Conversations became longer, smiles became
-                        more frequent, and somehow I started waiting
-                        for your messages.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        I Fell For You
-                    </h3>
-
-                    <p>
-                        Somewhere between the laughs, conversations
-                        and little moments, my heart chose you.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        Feeling At Home
-                    </h3>
-
-                    <p>
-                        With you, I discovered a feeling I didn't
-                        know I was looking for — peace.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        Still Choosing You
-                    </h3>
-
-                    <p>
-                        And today, after every moment,
-                        I would still choose you.
-                    </p>
-
-                </div>
-
-
-            </div>
+            <p>
+                There are still places we haven't visited,
+                memories we haven't made, sunsets we haven't
+                watched together, silly moments we haven't
+                laughed about yet, and countless ordinary days
+                waiting to become special.
+            </p>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     MEMORIES
-========================= -->
+    <!-- =========================
+         FINAL
+    ========================= -->
 
-<section class="memories">
+    <section class="final-section">
 
-    <div class="memories-heading">
+        <div class="final-content">
 
-        <div class="section-label">
-            OUR MEMORIES
-        </div>
-
-        <h2>
-            Moments I Want To<br>
-            Keep Forever
-        </h2>
-
-    </div>
-
-
-    <div class="photo-grid">
-
-        <img
-            src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85"
-            alt="Romantic memory"
-        >
-
-        <img
-            src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=85"
-            alt="Couple memory"
-        >
-
-        <img
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
-            alt="Love memory"
-        >
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     LOVE LETTER
-========================= -->
-
-<section class="love-letter">
-
-    <div class="letter-card">
-
-        <h2>
-            To My Favourite Person,
-        </h2>
-
-        <p>
-            If I could explain what you mean to me,
-            I don't think words would ever be enough.
-        </p>
-
-        <p>
-            You are not just someone I love.
-            You are the person I feel safest with.
-            The person I can be completely myself around.
-        </p>
-
-        <p>
-            You are my peace after a long day,
-            my smile when I need one,
-            and the person my heart naturally runs to.
-        </p>
-
-        <p>
-            Thank you for being my safe place,
-            my favourite person,
-            and my comfort zone.
-        </p>
-
-        <div class="signature">
-            With all my heart,<br>
-            Always yours ♥
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     QUOTE
-========================= -->
-
-<section class="quote-section">
-
-    <div class="quote-content">
-
-        <p>
-            “Home isn't always a place.
-            Sometimes, it's a person.”
-        </p>
-
-        <span>
-            And for me, it's you.
-        </span>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     DESCRIBE YOU
-========================= -->
-
-<section class="describe-section">
-
-    <div class="describe-wrapper">
-
-
-        <!-- CONTENT LEFT -->
-
-        <div class="describe-content">
-
-            <div class="section-label">
-                IF I HAD TO DESCRIBE YOU
+            <div class="final-small">
+                If I Had To Choose Again...
             </div>
 
             <h2>
-                He Is My Peace.<br>
-                He Is My Home.<br>
-                He Is My Comfort Zone.
+                I Would Choose You.
             </h2>
 
             <p>
-                You are the person who makes everything
-                feel a little softer.
-            </p>
-
-            <p>
-                With you, I don't have to pretend.
-                I can simply be myself — completely,
-                honestly and freely.
-            </p>
-
-            <p>
-                You are where my heart feels safe.
-                Where my mind can finally be quiet.
-                Where I can just breathe.
-            </p>
-
-            <p class="highlight">
-                If comfort had a name,
-                I think it would be yours.
+                I would find you.
+                I would choose you.
+                I would love you.
+                All over again.
             </p>
 
         </div>
 
-
-        <!-- IMAGE RIGHT -->
-
-        <div class="describe-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
-                alt="Romantic couple together"
-            >
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     FUTURE
-========================= -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-<section class="future">
+    <footer>
 
-    <div class="future-content">
-
-        <div class="section-label">
-            OUR FUTURE
-        </div>
-
-        <h2>
-            This Isn't The End
-        </h2>
+        <h3>
+            Forever & Always ♥
+        </h3>
 
         <p>
-            There are still so many places we haven't seen,
-            memories we haven't made, sunsets we haven't watched
-            together, silly moments we haven't laughed about,
-            and ordinary days that will somehow become special
-            simply because we are together.
+            ONE STORY · TWO HEARTS · ONE BEAUTIFUL JOURNEY
         </p>
 
-        <p style="margin-top:25px;">
-            And whatever the future brings,
-            I hope I get to experience it with you.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FINAL
-========================= -->
-
-<section class="final-section">
-
-    <div class="final-content">
-
-        <h2>
-            If I Had To<br>
-            Choose Again...
-        </h2>
-
-        <p>
-            I would find you.<br>
-            I would choose you.<br>
-            I would love you.<br>
-            All over again.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <h3>
-        Forever & Always ♥
-    </h3>
-
-    <p>
-        ONE STORY · TWO HEARTS · ONE BEAUTIFUL JOURNEY
-    </p>
-
-</footer>
-
+    </footer>
 
 </body>
 </html>
